@@ -17,7 +17,7 @@ export default function SignUp()
       email: credentials.email,
       password: credentials.password,
       location: credentials.location,}))
-    const response =await fetch("http://localhost:3000/api/createuser",{
+    const response =await fetch("https://handicart.onrender.com/api/createuser",{
     method:'POST',
     headers:{
       'Content-Type':'application/json'
