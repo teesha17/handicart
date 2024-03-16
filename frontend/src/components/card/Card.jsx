@@ -1,16 +1,30 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { useDispatchCart, useCart } from '../contextReducer/ContextReducer';
-
+import Modal from '../../Modal';
+import ViewMore from '../../screens/ViewMore';
+import { json } from 'react-router-dom';
 export default function Card(props) {
   let foodItem = props.foodItems; // Corrected prop name
   let dispatch = useDispatchCart();
   let data = useCart();
-
+  const[cartView,setCartView]=useState(false);
   const handleAddToCart = async () => {
     await dispatch({ type: "ADD", id: props.foodItem._id,name:props.foodItem.name, price: props.foodItem.price,img:props.foodItem.img }); // Access foodItem directly
         localStorage.setItem('cart', JSON.stringify(data));
     console.log(data);
   };
+  const handleViewMore=async()=>{
+    setCartView(true);
+    const cardData = {
+      id: props.foodItem._id,
+      name: props.foodItem.name,
+      price: props.foodItem.price,
+      img: props.foodItem.img
+    };
+  
+    localStorage.setItem("cardData", JSON.stringify(cardData));
+    console.log(localStorage.getItem("cardData"));
+  }
 
   return (
     <div className='d-inline'>
@@ -30,10 +44,14 @@ export default function Card(props) {
           </div>
           <hr />
           <button className={`btn btn-success justify-center ms-2`} onClick={handleAddToCart}>Add To Cart</button>
-          <button className={`btn btn-success justify-center ms-2`} onClick={handleAddToCart}>View More</button>
+          <div className="btn bg-white text-success mx-1" onClick={handleViewMore}>
+              View More
+            </div>
+            {cartView? <Modal onClose={()=>{setCartView(false)}}><ViewMore/></Modal>:null}
+        </div>
         </div>
       </div>
-    </div>
+   
   )
 }
 
