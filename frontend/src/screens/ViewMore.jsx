@@ -15,7 +15,7 @@ export default function ViewMore() {
                         <h1>{data.name}</h1>
                         <p className="m-3">Rs. {data.price}</p>
                         <button className="btn btn-success rounded m-3">
-                            <a href="https://wa.me/qr/4LS4RESPI4LFI1" target="_blank" rel="noopener noreferrer" style={{ "textDecoration": "none", "color": "white" }}>Chat On WhatsApp</a>
+                            <Link to="https://wa.me/qr/4LS4RESPI4LFI1"  style={{ "textDecoration": "none", "color": "white" }}>Chat On WhatsApp</Link>
                         </button>
                     </div>
                 </div>

@@ -3,6 +3,7 @@ import { useDispatchCart, useCart } from '../contextReducer/ContextReducer';
 import Modal from '../../Modal';
 import ViewMore from '../../screens/ViewMore';
 import { json } from 'react-router-dom';
+import './Card.css'
 export default function Card(props) {
   let foodItem = props.foodItems; // Corrected prop name
   let dispatch = useDispatchCart();
@@ -27,35 +28,47 @@ export default function Card(props) {
   }
 
   return (
-    <div className='d-inline'>
-      <div className="card mt-3" style={{ "width": "18rem", "maxHeight": "360px" }}>
-        <img src={props.foodItem.img} className="card-img-top" style={{ "width": "100%", "height": "200px" }} alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">{props.foodItem.name}</h5>
-          <div className='container w-100'>
-            {/* <select className='m-2 h-100 bg-success rounded'>
-              {Array.from(Array(6), (e, i) => {
-                return (
-                  <option key={i + 1} value={i + 1}>{i + 1}</option>
-                )
-              })}
-            </select> */}
-            <p className='d-inline'>Rs. {props.foodItem.price}</p>
-          </div>
+    <div className='container-body'>
+    <div className='card-container'>
+      <div className="wrapper">
+        <img src={props.foodItem.img} className="banner-image" style={{ "width": "100%", "height": "200px" }} alt="..." />
+        
+          <h1 className='name'>{props.foodItem.name}</h1>
+          
+            <p className='price'>Rs. {props.foodItem.price}</p>
+         
           <hr />
-          <button className={`btn btn-success justify-center ms-2`} onClick={handleAddToCart}>Add To Cart</button>
-          <div className="btn bg-white text-success mx-1" onClick={handleViewMore}>
+          <div className='button-wrapper'>
+          <button className="btn1 outline" onClick={handleAddToCart}>Add To Cart</button>
+          <button className="btn1 fill" onClick={handleViewMore}>
               View More
-            </div>
+            </button>
             {cartView? <Modal onClose={()=>{setCartView(false)}}><ViewMore/></Modal>:null}
+            </div>
         </div>
         </div>
       </div>
-   
+
   )
 }
 
 
+{/* <div class="container">
+ <div class="wrapper">
+   <img src={props.foodItem.img} class="banner-image"> </img>
+   <h1>{props.foodItem.name}</h1>
+   <p>Rs. {props.foodItem.price} <br/>
+     consectetur adipiscing elit.</p>
+  </div>
+  <div class="button-wrapper"> 
+  <button className="btn outline" onClick={handleAddToCart}>Add To Cart</button>
+  <div className="btn bg-white text-success mx-1" onClick={handleViewMore}>
+              View More
+            </div>
+            {cartView? <Modal onClose={()=>{setCartView(false)}}><ViewMore/></Modal>:null}
+  </div>
+    </div>
+</div> */}
 
 
 
