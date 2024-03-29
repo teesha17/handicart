@@ -53,12 +53,12 @@ export default function Home() {
     <div className='latest'>
     <div class="container-home">
     
-      <img className='img-latest' src="public/img2.jpg" alt=""/>
-      <img className='img-latest' src="public/img1.jpg" alt=""/>
-      <img className='img-latest' src="public/img3.jpg" alt=""/>
-      <img className='img-latest' src="public/img2.jpg" alt=""/>
-      <img className='img-latest' src="public/img1.jpg" alt=""/>
-      <img className='img-latest' src="public/img3.jpg" alt=""/>
+      <img className='img-latest' src="/img2.jpg" alt=""/>
+      <img className='img-latest' src="/img1.jpg" alt=""/>
+      <img className='img-latest' src="/img3.jpg" alt=""/>
+      <img className='img-latest' src="/img2.jpg" alt=""/>
+      <img className='img-latest' src="/img1.jpg" alt=""/>
+      <img className='img-latest' src="/img3.jpg" alt=""/>
     </div>
 </div>
   </div>
@@ -69,12 +69,12 @@ export default function Home() {
     <div className='latest'>
     <div class="container-home">
     
-      <img className='img-latest' src="public/img2.jpg" alt=""/>
-      <img className='img-latest' src="public/img1.jpg" alt=""/>
-      <img className='img-latest' src="public/img3.jpg" alt=""/>
-      <img className='img-latest' src="public/img2.jpg" alt=""/>
-      <img className='img-latest' src="public/img1.jpg" alt=""/>
-      <img className='img-latest' src="public/img3.jpg" alt=""/>
+      <img className='img-latest' src="/img2.jpg" alt=""/>
+      <img className='img-latest' src="/img1.jpg" alt=""/>
+      <img className='img-latest' src="/img3.jpg" alt=""/>
+      <img className='img-latest' src="/img2.jpg" alt=""/>
+      <img className='img-latest' src="/img1.jpg" alt=""/>
+      <img className='img-latest' src="/img3.jpg" alt=""/>
     </div>
 </div>
   </div>
@@ -127,12 +127,12 @@ export default function Home() {
     <div className='latest'>
     <div class="container-home">
     
-      <img className='img-latest' src="public/img2.jpg" alt=""/>
-      <img className='img-latest' src="public/img1.jpg" alt=""/>
-      <img className='img-latest' src="public/img3.jpg" alt=""/>
-      <img className='img-latest' src="public/img2.jpg" alt=""/>
-      <img className='img-latest' src="public/img1.jpg" alt=""/>
-      <img className='img-latest' src="public/img3.jpg" alt=""/>
+      <img className='img-latest' src="/img2.jpg" alt=""/>
+      <img className='img-latest' src="/img1.jpg" alt=""/>
+      <img className='img-latest' src="/img3.jpg" alt=""/>
+      <img className='img-latest' src="/img2.jpg" alt=""/>
+      <img className='img-latest' src="/img1.jpg" alt=""/>
+      <img className='img-latest' src="/img3.jpg" alt=""/>
     </div>
 </div>
   </div>
@@ -143,12 +143,12 @@ export default function Home() {
     <div className='latest'>
     <div class="container-home">
     
-      <img className='img-latest' src="public/img2.jpg" alt=""/>
-      <img className='img-latest' src="public/img1.jpg" alt=""/>
-      <img className='img-latest' src="public/img3.jpg" alt=""/>
-      <img className='img-latest' src="public/img2.jpg" alt=""/>
-      <img className='img-latest' src="public/img1.jpg" alt=""/>
-      <img className='img-latest' src="public/img3.jpg" alt=""/>
+      <img className='img-latest' src="/img2.jpg" alt=""/>
+      <img className='img-latest' src="/img1.jpg" alt=""/>
+      <img className='img-latest' src="/img3.jpg" alt=""/>
+      <img className='img-latest' src="/img2.jpg" alt=""/>
+      <img className='img-latest' src="/img1.jpg" alt=""/>
+      <img className='img-latest' src="/img3.jpg" alt=""/>
     </div>
 </div>
   </div>
