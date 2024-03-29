@@ -1,500 +1,243 @@
-/* .head{
-    font-size: 5rem;
-}
-.head1{
-    color:black;
-}
-.head2{
-    color:#5c98ff;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
 
-}
-.text{
-    max-width:400px;
-    min-width:300px;
-}
-.container6{
-display:flex;
-justify-content:space-between;
+/* body{
+	font-family: 'Oswald', sans-serif;
 
-}
-.features{
-display:flex;
-}
-.prop{
-color:black;
-}
-.image1{
-margin-top:100px;
-z-index:3;
-}
-.home{
-height: 100vh;
-background-image: linear-gradient(rgba(144, 218, 240, 0.5), rgba(241, 235, 235, 0));
-background-position: center;
-background-size: cover;
-
-
-/* Create the parallax scrolling effect 
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-.properties{
-display:grid;
-gap:30px;
-grid-template-columns: 1fr 1fr 1fr;;
-}
-
-.pic1{
-background-image:linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0)), url("https://cdn.pixabay.com/photo/2023/05/27/08/20/headphones-8021022_1280.jpg");
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-height:300px;
-text-align: center;
-padding-top: 100px;
-margin-left: 50px;
-color:white;
-}
-.aos-animate{
-animation:slide-up 2s ease;
-}
-@keyframes slide-up{
-  0%{
-    transform: translateY(250px);
-  }
-  100%{
-    transform: translateY(0);
-  }
-}
-.pic3{
-background-image:linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0)), url("https://cdn.pixabay.com/photo/2023/05/27/08/20/headphones-8021022_1280.jpg");
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-height:300px;
-text-align: center;
-padding-top: 100px;
-margin-right: 50px;
-color:white;
-}
-.pic2{
-background-image:linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0)), url("https://cdn.pixabay.com/photo/2023/05/27/08/20/headphones-8021022_1280.jpg");
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-height:300px;
-text-align: center;
-padding-top: 100px;
-color:white;
-}
-.container2{
-display: grid;
-grid-template-columns: 1fr 3fr;
-grid-template-rows: 1fr;
-gap:80px;
-justify-content: center;
-}
-.container3{
-display:grid;
-grid-template-columns: 3fr 1fr;
-grid-template-rows: 1fr;
-gap:80px;
-}
-.container4{
-display:flex;
-align-items: center;
-}
-.container5{
-display:flex;
-flex-flow: column;
-align-items: center;
-}
-.flex1{
-    display:flex;
-    gap:20px;
-    justify-content: center;
-}
-
-
-
-
-.ag-format-container {
-  width: 1142px;
-  margin: 0 auto;
-}
-
-
-.ag-courses_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-
-  padding: 50px 0;
-}
-.ag-courses_item {
-  -ms-flex-preferred-size: calc(33.33333% - 30px);
-  flex-basis: calc(33.33333% - 30px);
-
-  margin: 0 15px 30px;
-
-  overflow: hidden;
-
-  border-radius: 28px;
-}
-.ag-courses-item_link {
-  display: block;
-  padding: 30px 20px;
-  background-color: #121212;
-
-  overflow: hidden;
-
-  position: relative;
-}
-.ag-courses-item_link:hover,
-.ag-courses-item_link:hover .ag-courses-item_date {
-  text-decoration: none;
-  color: #FFF;
-}
-.ag-courses-item_link:hover .ag-courses-item_bg {
-  -webkit-transform: scale(10);
-  -ms-transform: scale(10);
-  transform: scale(10);
-}
-.ag-courses-item_title {
-  min-height: 87px;
-  margin: 0 0 25px;
-
-  overflow: hidden;
-
-  font-weight: bold;
-  font-size: 30px;
-  color: #FFF;
-
-  z-index: 2;
-  position: relative;
-}
-.ag-courses-item_date-box {
-  font-size: 18px;
-  color: #FFF;
-
-  z-index: 2;
-  position: relative;
-}
-.ag-courses-item_date {
-  font-weight: bold;
-  color: #f9b234;
-
-  -webkit-transition: color .5s ease;
-  -o-transition: color .5s ease;
-  transition: color .5s ease
-}
-.ag-courses-item_bg {
-  height: 128px;
-  width: 128px;
-  background-color: #f9b234;
-
-  z-index: 1;
-  position: absolute;
-  top: -75px;
-  right: -75px;
-
-  border-radius: 50%;
-
-  -webkit-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
-}
-.ag-courses_item:nth-child(2n) .ag-courses-item_bg {
-  background-color: #3ecd5e;
-}
-.ag-courses_item:nth-child(3n) .ag-courses-item_bg {
-  background-color: #e44002;
-}
-.ag-courses_item:nth-child(4n) .ag-courses-item_bg {
-  background-color: #952aff;
-}
-.ag-courses_item:nth-child(5n) .ag-courses-item_bg {
-  background-color: #cd3e94;
-}
-.ag-courses_item:nth-child(6n) .ag-courses-item_bg {
-  background-color: #4c49ea;
-}
-
-
-
-@media only screen and (max-width: 979px) {
-  .ag-courses_item {
-    -ms-flex-preferred-size: calc(50% - 30px);
-    flex-basis: calc(50% - 30px);
-  }
-  .ag-courses-item_title {
-    font-size: 24px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .ag-format-container {
-    width: 96%;
-  }
-
-}
-@media only screen and (max-width: 639px) {
-  .ag-courses_item {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-  }
-  .ag-courses-item_title {
-    min-height: 72px;
-    line-height: 1;
-
-    font-size: 24px;
-  }
-  .ag-courses-item_link {
-    padding: 22px 40px;
-  }
-  .ag-courses-item_date-box {
-    font-size: 16px;
-  }
+	section{
+		width: 90%;
+		max-width: 1200px;
+		margin: 0 auto;
+		.row{
+			align-items: center;
+    	height: 100vh;
+		}
+	}
 } */
+.card{
+	position: relative;
+	height: 400px;
+	width: 100%;
+	margin: 10px 0;
+	transition: ease all 2.3s;
+	perspective: 1200px;
+	&:hover{
+		.cover{
+			transform: rotateX(0deg) rotateY(-180deg);
+			&:before{
+				transform: translateZ(30px);
+			}
+			&:after{
+				background-color: rgb(255, 255, 255);
+			}
+			h1{
+				transform: translateZ(100px);
+			}
+			.price{
+				transform: translateZ(60px);
+			}
+			a{
+				transform: translateZ(-60px) rotatey(-180deg);
+			}
+		}
+	}
+	
+	.cover{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		transform-style: preserve-3d;
+  	transition: ease all 2.3s;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		&:before{
+			content: '';
+			position: absolute;
+			border: 5px solid rgba(255,255,255,.5);
+			box-shadow: 0 0 12px rgba(0,0,0,.3); 
+			top:20px;
+			left:20px;
+			right:20px;
+			bottom:20px;
+			z-index: 2;
+			transition: ease all 2.3s;
+			transform-style: preserve-3d;
+			transform: translateZ(0px);
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			top:0px;
+			left:0px;
+			right:0px;
+			bottom:0px;
+			z-index: 2;
+			transition: ease all 1.3s;
+			background: rgba(0,0,0,.4);
+		}
+		&.item-a{
+			background-image: url('src/assets/img1.jpg');
+		}
+		&.item-b{
+			background-image: url('src/assets/img2.jpg');
+		}
+		&.item-c{
+			background-image: url('src/assets/img3.jpg');
+		}
+		h1{
+			font-weight: 600;
+			position: absolute;
+			bottom: 55px;
+			left: 50px;
+			color: white;
+			transform-style: preserve-3d;
+  		transition: ease all 2.3s;
+			z-index:3;
+			font-size: 3em;
+			transform: translateZ(0px);
+		}
+		.price{
+			font-weight: 200;
+			position: absolute;
+			top: 55px;
+			right: 50px;
+			color: white;
+			transform-style: preserve-3d;
+  		transition: ease all 2.3s;
+			z-index:4;
+			font-size: 2em;
+			transform: translateZ(0px);
+		}
+	}
+	.card-back{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background: #0b0f08;
+		transform-style: preserve-3d;
+  	transition: ease all 2.3s;
+		transform: translateZ(-1px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		a{
+			transform-style: preserve-3d;
+			transition: ease transform 2.3s, ease background .5s;
+			transform: translateZ(-1px) rotatey(-180deg);
+			background: transparent;
+			border: 1px solid white;
+			font-weight: 200;
+			font-size: 1.3em;
+			color: white;
+			padding: 14px 32px;
+			outline: none;
+			text-decoration: none;
+			&:hover{
+				background-color: white;
+				color: #0b0f08;
+			}
+		}
+	}
+}
 
 
-.flex1{
+
+
+
+
+.latest {
+  width: 100%;
+  height: 50vh;
+ 
+  
+  display:grid;
+  place-items:center;
+}
+.img-latest {
+  width: 30%;
+  height: 100%;
+  object-fit:cover;
+  
+  -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
+  
+  transform-origin:center;
+  transform:perspective(800px) rotateY(25deg);
+  transition:0.5s;
+}
+.container-home {
+  max-width:600px;
+  max-height:350px;
+  
+  
+  
   display:flex;
+  justify-content:center;
+  align-items:center;
   gap:20px;
-  justify-content: center;
-}
-.headf{
-  font-size: 30px;
-  text-align: center;
-  color:white;
-}
-.footf{
-  font-size: 15px;
-  text-align: center;
-  color:white;
-}
-
-
-
-.footer1{
-  background-color: #884A39;
-  height:40vh;
-  padding-top:100px;
-  margin-top:50px;
-}
-.head{
-  color:white;
-  text-align: center;
-  font-size: 4rem;
-  font-weight: lighter;
-}
-.foot{
-  color:white;
-  text-align: center;
-  font-size:20px;
-}
-.home {
-height: 100vh;
- background-image: /*linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0)),*/ url("https://png.pngtree.com/background/20220714/original/pngtree-cute-pastel-background-aesthetic-picture-image_1603835.jpg"); 
-background-position: center;
-background-size: cover;
-
-
-/* Create the parallax scrolling effect */
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-/* Arrow & Hover Animation */
-#more-arrows {
-	width: 75px;
-  height: 65px;
-  
-  &:hover {
-    
-    polygon {
-      fill: #FFF;
-      transition: all .2s ease-out;
-
-      &.arrow-bottom {
-        transform: translateY(-18px);
-      }
-
-      &.arrow-top {
-        transform: translateY(18px);
-      }
-      
-    }
-  
-  }
   
 }
-
-polygon {
-  fill: #ca9add;
-  transition: all .2s ease-out;
-    
-  &.arrow-middle {
-	  opacity: 0.75;
-	}
-
-	&.arrow-top {
-	  opacity: 0.5
-	}
-	 
+.container-home:hover img {
+  opacity:0.3;
 }
-.recipies{
-background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0)),url("https://cdn.shopify.com/s/files/1/0548/7928/9513/files/Dreamcatcher_Nameplate_480x480.png?v=1653304476");
-border-radius: 5% 0 20%;
-margin-left:100px;
-margin-top: 50px;;
-margin-right: 0;
-margin-bottom:0px;
-padding-top:100px;
-padding-left: 100px;
-padding-right:100px;
-
-/* Create the parallax scrolling effect */
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+.container-home img:hover {
+  transform:perspective(800px)       rotateY(0deg);
+  opacity:1;
 }
-.e{
-background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0)),url("https://e0.pxfuel.com/wallpapers/574/830/desktop-wallpaper-coffee-grounds-background-romantic-background-for-hop-and-romantic-music-background-coffee-beach.jpg");
-border-radius: 5% 0 20%;
-margin-top:50px;
-margin-left:0;
-margin-right: 100px;
-margin-bottom:0px;
-padding-top:100px;
-padding-left: 100px;
-padding-right:100px;
 
 
-/* Create the parallax scrolling effect */
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-.india{
-background-image:linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0)), url("https://wallpaperaccess.com/full/1076693.jpg");
-border-radius: 5% 0 20%;
-margin-top:0px;
-margin-left:100px;
-margin-right:0px;
-margin-bottom: 50px;
-padding-top:100px;
-padding-left: 100px;
-padding-right:100px;
-/* Create the parallax scrolling effect */
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-.tasting{
-background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0)),url("https://static6.depositphotos.com/1000201/542/i/600/depositphotos_5425468-stock-photo-coffee-background.jpg");
-border-radius: 5% 0 20%;
-margin-top:0px;
-margin-left:0px;
-margin-right:100px;
-margin-bottom: 50px;
-padding-top:100px;
-padding-left: 100px;
-padding-right:100px;
 
 
-/* Create the parallax scrolling effect */
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+
+
+
+
+.article-card {
+  width: 350px;
+  height: 220px;
+  border-radius: 12px;
+  
+  margin:10px;
+  margin-top: 50px;
+  overflow: hidden;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 300ms;
 }
-.nav-pills {
---bs-nav-pills-border-radius: var(--bs-border-radius);
---bs-nav-pills-link-active-color: #212529;
---bs-nav-pills-link-active-bg: rgb(13 110 253 / 0%);
+
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-.nav-link {
---bs-nav-link-padding-x: 1rem;
---bs-nav-link-padding-y: 0.5rem;
---bs-nav-link-font-weight: ;
---bs-nav-link-font-size:20px;
---bs-nav-link-color: #212529 var(--bs-link-color);
---bs-nav-link-hover-color: #020b14;
---bs-nav-link-disabled-color: var(--bs-secondary-color);
+
+.article-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.features{
-display:grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 500px 500px;
-gap:70px;
+
+.article-card .content {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  padding: 30px 20px 20px 20px;
+  height: auto;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
 }
-svg{
-color:white;
+
+.article-card .date,
+.article-card .title {
+  margin: 0;
 }
-.recipie{
-background-image:linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0)), url("https://img.huffingtonpost.com/asset/627a6670210000f1c3507cbe.jpeg?ops=1778_1000");
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-height:600px;
-padding:200px;
+
+.article-card .date {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 4px;
 }
-.experience{
-background-image:linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0)), url("https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?cs=srgb&dl=pexels-igor-haritanovich-1695052.jpg&fm=jpg");
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-height:600px;
-padding:200px;
-}
-.campaign{
-background-image:linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0)), url("https://media.istockphoto.com/id/1271386167/photo/coffee.jpg?s=612x612&w=0&k=20&c=5gWShBS-lSa_ycm1_olcm9wric7dKYNMMm8Q780-A74=");
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-height:600px;
-padding:200px;
-}
-.taste{
-background-image:linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0)), url("https://media.istockphoto.com/id/1303583671/photo/cup-glass-of-coffee-with-smoke-and-coffee-beans-on-old-wooden-background.jpg?s=612x612&w=0&k=20&c=fAh3m6Hqxz-qeA45Tj2jGARhRiGFhgm80dLVthnvlD8=");
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-height:600px;
-padding:200px;
-}
-.p1{
-text-align: center;
-font-size: 15px;
-color:white;
-}
-.head2{
-text-align: center;
-font-size: 70px;
-color:white;
-}
-.p2{
-text-align: center;
-font-size: 20px;
-color:white;
+
+.article-card .title {
+  font-size: 17px;
+  color: #fff;
 }

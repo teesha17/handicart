@@ -5,6 +5,7 @@ import Login from './screens/Login.jsx';
 import MyOrder from './screens/MyOrder.jsx';
 import Payment from './screens/Payment.jsx';
 import Items from './screens/items.jsx';
+import ViewMore from './screens/ViewMore.jsx';
 import {BrowserRouter as Router,
   Routes,
   Route
@@ -24,6 +25,7 @@ function App() {
         <Route path='/createuser' element={<SignUp/>}/>
         <Route exact path="/myorder" element={<MyOrder />} />
         <Route path="/payment" element={<Payment/>}/>
+        <Route path="/viewmore" element={<ViewMore/>}/>
       </Routes>
     </div>
   </Router>

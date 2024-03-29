@@ -34,7 +34,7 @@ export default function Cart() {
     }
     navigate("/payment");
   };
-
+ 
   let totalPrice = data.reduce((total, food) => total + parseInt(food.price), 0);
 
   return (
@@ -46,7 +46,7 @@ export default function Cart() {
               <th scope='col'>#</th>
               <th scope='col'>Name</th>
               <th scope='col'>Quantity</th>
-              <th scope='col'>Option</th>
+              
               <th scope='col'>Amount</th>
               <th scope='col'></th>
             </tr>
@@ -57,9 +57,9 @@ export default function Cart() {
                 <th scope='row'>{index + 1}</th>
                 <td>{food.name}</td>
                 <td>{food.qty}</td>
-                <td>{food.size}</td>
+               
                 <td>{food.price}</td>
-                <td><button type="button" className="btn btn-info p-0" onClick={() => { dispatch({ type: "REMOVE", index: index }) }}>Remove</button></td>
+                <td><button type="button" className="btn btn-dark p-0" onClick={() => { dispatch({ type: "REMOVE", index: index }) }}>Remove</button></td>
               </tr>
             ))}
           </tbody>

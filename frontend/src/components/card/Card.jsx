@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useDispatchCart, useCart } from '../contextReducer/ContextReducer';
 import Modal from '../../Modal';
 import ViewMore from '../../screens/ViewMore';
@@ -9,13 +10,14 @@ export default function Card(props) {
   let dispatch = useDispatchCart();
   let data = useCart();
   const[cartView,setCartView]=useState(false);
+  const navigate=useNavigate();
   const handleAddToCart = async () => {
     await dispatch({ type: "ADD", id: props.foodItem._id,name:props.foodItem.name, price: props.foodItem.price,img:props.foodItem.img }); // Access foodItem directly
         localStorage.setItem('cart', JSON.stringify(data));
     console.log(data);
   };
   const handleViewMore=async()=>{
-    setCartView(true);
+    navigate('/viewmore');
     const cardData = {
       id: props.foodItem._id,
       name: props.foodItem.name,
@@ -28,29 +30,69 @@ export default function Card(props) {
   }
 
   return (
-    <div className='container-body'>
-    <div className='card-container'>
-      <div className="wrapper">
-        <img src={props.foodItem.img} className="banner-image" style={{ "width": "100%", "height": "200px" }} alt="..." />
-        
-          <h1 className='name'>{props.foodItem.name}</h1>
-          
-            <p className='price'>Rs. {props.foodItem.price}</p>
-         
-          <hr />
-          <div className='button-wrapper'>
-          <button className="btn1 outline" onClick={handleAddToCart}>Add To Cart</button>
-          <button className="btn1 fill" onClick={handleViewMore}>
-              View More
-            </button>
-            {cartView? <Modal onClose={()=>{setCartView(false)}}><ViewMore/></Modal>:null}
-            </div>
-        </div>
-        </div>
-      </div>
+    <div class="container-card" style={{backgroundImage:`url(${props.foodItem.img})`}} onClick={handleViewMore}>
+      
+  <div class="overlay">
+    <div class = "items"></div>
+    <div class = "items head">
+      <p>{props.foodItem.name}</p>
+      <hr/>
+    </div>
+    <div class = "items price">
+      <p class="new">Rs. {props.foodItem.price}</p>
+     
+    </div>
+    <div class="items cart">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+  <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+</svg>
 
+      <span onClick={handleAddToCart}>ADD TO CART</span>
+      <br/>
+      
+  </div>
+</div>
+</div>
   )
 }
+
+
+
+
+{/* <div class="container-card" style={{backgroundImage:"url(`${{props.foodItem.img}}`)"}}>
+  <div class="overlay">
+    <div class = "items"></div>
+    <div class = "items head">
+      <p>{props.foodItem.name}</p>
+      <hr/>
+    </div>
+    <div class = "items price">
+      <p class="new">Rs. {props.foodItem.price}</p>
+     
+    </div>
+    <div class="items cart">
+      <i class="fa fa-shopping-cart"></i>
+      <span onClick={handleAddToCart}>ADD TO CART</span>
+      <span onClick={handleViewMore}>View More</span>
+      {cartView? <Modal onClose={()=>{setCartView(false)}}><ViewMore/></Modal>:null}
+  </div>
+</div>
+</div> */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 {/* <div class="container">

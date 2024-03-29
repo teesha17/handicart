@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600&family=Montserrat:ital,wght@0,100;0,500;0,700;1,100;1,500;1,800&family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@500&family=Rubik:wght@300;400;500;700&family=Ysabeau+SC:wght@300&display=swap');
+
+.hamburger {
+    position: absolute;
+    top: 10%;
+    right: 6%;
+    display: none;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 2px;
+    margin-top: 8px;
+    background-color:rgb(0, 0, 0);
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.1);
+    padding: 0.5% 0;
+    box-shadow: 2px 1px 10px rgb(11, 11, 11);
+}
+
+.navBar .jscop {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    margin-left:2%;
+}
+
+.navbar-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    padding: 4px 6px;
+    transition: 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    text-transform: uppercase;
+}
+
+.navBar a:hover {
+    transform: scale(1.1);
+    font-weight: 400; 
+    text-decoration: none;
+    background-color: rgba(104, 102, 102,0.3);
+    border-radius: 10px;
+}
+
+
+@media only screen and (max-width:1160px) {
+
+    .navBar a {
+        margin: 0 6px;
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width:850px) {
+   
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        height: 40px;
+    }
+
+    .navbar-fixed {
+        width: 100vw;
+        height:100px;
+    }
+
+    .navBar {
+        padding: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        height: 100px;
+        backdrop-filter: blur(10px);
+    }
+
+    .navBar .jscop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50px;
+    }
+
+    .navbar-items {
+        flex-direction: column;
+        background-color:rgba(188, 160, 160, 0.9);
+        width: 100%;
+        padding: 20%;
+        margin-top: -2500px;
+        transition: all 0.8s ease-in-out;
+        border-bottom-right-radius: 15%;
+        border-bottom-left-radius: 15%;
+    }
+
+    .mobilemenu {
+        margin-top: 50%;
+    }
+
+    .navBar a {
+        margin-top: 10%;
+        font-weight: 500;
+    }
+
+    .navBar a:hover {
+        background-color: #4e239b;
+        border-radius: 5%;
+        padding: 1px 10px;
+        color: rgb(0, 0, 0);
+    }
+    svg{
+        height: 30px;
+        width: 30px;
+    }
+
+}
+
+@media only screen and (max-width:520px) {
+
+    .hline1 {
+        width: 80%;
+    }
+
+    .hline2 {
+        width: 80%;
+        display:block;
+
+    }
+
+    .hamburger {
+        top: 0;
+        color:black;
+    }
+
+    .navBar {
+        padding:20px;
+        height: 50px;
+    }
+
+    .navBar .jscop {
+        font-size: 1.5rem;
+    }
+}
