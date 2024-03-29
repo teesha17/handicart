@@ -77,7 +77,7 @@ export default function SignUp()
 <section className="position-relative h-100 pt-5 pb-4">
 <div className="container d-flex flex-wrap justify-content-center justify-content-xl-center h-100 pt-5">
   <div className="w-100 align-self-end pt-1 pt-md-4 pb-4" style={{"max-width": "526px"}}>
-    <h1 className="text-center text-xl-start">Welcome Back</h1>
+    <h1 className="text-center text-xl-start">Welcome</h1>
     <form className="needs-validation mb-2" onSubmit={handleSubmit}>
       <div className="position-relative mb-4">
         <label for="email" className="form-label fs-base">Email</label>

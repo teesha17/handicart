@@ -64,7 +64,7 @@ export default function Cart() {
             ))}
           </tbody>
         </table>
-        <div><h1 className='fs-2' style={{ color: 'white' }}>Total Price: {totalPrice}/-</h1></div>
+        <div><h1 className='fs-2' style={{ color: 'black' }}>Total Price: {totalPrice}/-</h1></div>
         <div>
           <button className='btn bg-danger mt-5' onClick={handleCheckOut}>Check Out</button>
         </div>
