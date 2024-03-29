@@ -75,7 +75,7 @@ export default function SignUp()
 </div> */}
 <div className='container'>
 <section className="position-relative h-100 pt-5 pb-4">
-<div className="container d-flex flex-wrap justify-content-center justify-content-xl-start h-100 pt-5">
+<div className="container d-flex flex-wrap justify-content-center justify-content-xl-center h-100 pt-5">
   <div className="w-100 align-self-end pt-1 pt-md-4 pb-4" style={{"max-width": "526px"}}>
     <h1 className="text-center text-xl-start">Welcome Back</h1>
     <form className="needs-validation mb-2" onSubmit={handleSubmit}>
@@ -92,7 +92,7 @@ export default function SignUp()
           <div className="invalid-feedback position-absolute start-0 top-100">Please enter your password!</div>
         </div>
       </div>
-      <button type="submit" className="btn btn-primary shadow-primary btn-lg w-100">Sign in</button>
+      <button type="submit" className="btn btn-dark shadow-primary btn-lg w-100">Sign in</button>
       <Link to="/login" className='m-3 btn btn-danger'>Already a user?</Link>
     </form>
   <div className="w-100 align-self-end">
