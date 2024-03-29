@@ -109,9 +109,7 @@ const Navbar = () => {
             Shefali's Creative Corner
           </div>
           
-          <div
-            className={`navbar-items ${isMobileMenuOpen ? "mobilemenu" : ""}`}
-          >
+          <div className={`navbar-items ${isMobileMenuOpen ? "mobilemenu" : ""}`}>
             <a onClick={closeMobileMenu}>
             <Link to='/' style={{color:'black'}}>Home</Link>
             </a>
