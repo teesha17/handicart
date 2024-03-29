@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div>
 <Navbar/>
-<h1 style={{textAlign:'center'}}>HAPPY SHOPPING!!</h1>
+<h1 className='my-5'style={{textAlign:'center'}}>HAPPY SHOPPING!!</h1>
 <div class="row my-5">
 
 		<div class="col-md-4 col-sm-6 col-xs-12">
@@ -53,12 +53,12 @@ export default function Home() {
     <div className='latest'>
     <div class="container-home">
     
-      <img className='img-latest' src="src/assets/img2.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img1.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img3.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img2.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img1.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img3.jpg" alt=""/>
+      <img className='img-latest' src="public/img2.jpg" alt=""/>
+      <img className='img-latest' src="public/img1.jpg" alt=""/>
+      <img className='img-latest' src="public/img3.jpg" alt=""/>
+      <img className='img-latest' src="public/img2.jpg" alt=""/>
+      <img className='img-latest' src="public/img1.jpg" alt=""/>
+      <img className='img-latest' src="public/img3.jpg" alt=""/>
     </div>
 </div>
   </div>
@@ -69,12 +69,12 @@ export default function Home() {
     <div className='latest'>
     <div class="container-home">
     
-      <img className='img-latest' src="src/assets/img2.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img1.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img3.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img2.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img1.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img3.jpg" alt=""/>
+      <img className='img-latest' src="public/img2.jpg" alt=""/>
+      <img className='img-latest' src="public/img1.jpg" alt=""/>
+      <img className='img-latest' src="public/img3.jpg" alt=""/>
+      <img className='img-latest' src="public/img2.jpg" alt=""/>
+      <img className='img-latest' src="public/img1.jpg" alt=""/>
+      <img className='img-latest' src="public/img3.jpg" alt=""/>
     </div>
 </div>
   </div>
@@ -127,12 +127,12 @@ export default function Home() {
     <div className='latest'>
     <div class="container-home">
     
-      <img className='img-latest' src="src/assets/img2.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img1.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img3.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img2.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img1.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img3.jpg" alt=""/>
+      <img className='img-latest' src="public/img2.jpg" alt=""/>
+      <img className='img-latest' src="public/img1.jpg" alt=""/>
+      <img className='img-latest' src="public/img3.jpg" alt=""/>
+      <img className='img-latest' src="public/img2.jpg" alt=""/>
+      <img className='img-latest' src="public/img1.jpg" alt=""/>
+      <img className='img-latest' src="public/img3.jpg" alt=""/>
     </div>
 </div>
   </div>
@@ -143,12 +143,12 @@ export default function Home() {
     <div className='latest'>
     <div class="container-home">
     
-      <img className='img-latest' src="src/assets/img2.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img1.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img3.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img2.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img1.jpg" alt=""/>
-      <img className='img-latest' src="src/assets/img3.jpg" alt=""/>
+      <img className='img-latest' src="public/img2.jpg" alt=""/>
+      <img className='img-latest' src="public/img1.jpg" alt=""/>
+      <img className='img-latest' src="public/img3.jpg" alt=""/>
+      <img className='img-latest' src="public/img2.jpg" alt=""/>
+      <img className='img-latest' src="public/img1.jpg" alt=""/>
+      <img className='img-latest' src="public/img3.jpg" alt=""/>
     </div>
 </div>
   </div>

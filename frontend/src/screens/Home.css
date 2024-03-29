@@ -76,13 +76,13 @@
 			background: rgba(0,0,0,.4);
 		}
 		&.item-a{
-			background-image: url('src/assets/img1.jpg');
+			background-image: url('public/img1.jpg');
 		}
 		&.item-b{
-			background-image: url('src/assets/img2.jpg');
+			background-image: url('public/img2.jpg');
 		}
 		&.item-c{
-			background-image: url('src/assets/img3.jpg');
+			background-image: url('public/img3.jpg');
 		}
 		h1{
 			font-weight: 600;
