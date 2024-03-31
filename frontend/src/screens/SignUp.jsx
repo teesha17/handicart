@@ -49,7 +49,7 @@ export default function SignUp()
 
   return (
     <>
-    {/* <div className='container'>
+    <div className='container'>
       <form onSubmit={handleSubmit}>
       <div className="form-group">
     <label htmlFor="name">Name</label>
@@ -72,8 +72,8 @@ export default function SignUp()
   <button type="submit" className="m-3 btn btn-success">Submit</button>
   <Link to="/login" className='m-3 btn btn-danger'>Already a user?</Link>
 </form>
-</div> */}
-<div className='container'>
+</div>
+{/* <div className='container'>
 <section className="position-relative h-100 pt-5 pb-4">
 <div className="container d-flex flex-wrap justify-content-center justify-content-xl-center h-100 pt-5">
   <div className="w-100 align-self-end pt-1 pt-md-4 pb-4" style={{"max-width": "526px"}}>
@@ -102,12 +102,12 @@ export default function SignUp()
     </p>    
   </div>
 </div>
-</div>
+</div> */}
 
 
 {/* <div className="position-absolute top-0 end-0 w-50 h-100 bg-position-center bg-repeat-0 bg-size-cover d-none d-xl-block" style={{"background-image": 'url("https://w0.peakpx.com/wallpaper/195/371/HD-wallpaper-aesthetic-purple-animated-buildings-aesthetic-purple-animated-buildings-moon-and-stars.jpg")',"background-size":"cover"}}></div> */}
-</section>
-</div>
+{/* </section>
+</div> */}
     </>
   )
 }
