@@ -1,7 +1,9 @@
 import React,{useState} from 'react';
-import './Home.css';
+
 import Navbar from '../components/navbar/Navbar.jsx';
 import Footer from '../components/footer/Footer.jsx';
+
+
 export default function Home() {
   return (
     <div>
@@ -148,9 +150,9 @@ export default function Home() {
       <img className='img-latest' src="/img3.jpg" alt=""/>
     </div>
 </div>
-  </div>
+  </div> */}
 
-   */}
+  
  <Footer/>
 
   </div>
