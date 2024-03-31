@@ -127,7 +127,7 @@ const Navbar = () => {
             (localStorage.getItem("authToken"))?
             <>
               <a className="nav-link active fs-5 text-black" onClick={()=>{setCartView(true)}}>
-              My Cart <Badge pill bg="danger">{items.length}</Badge>
+              My Cart <Badge pill bg="danger">{items.length+1}</Badge>
             </a>
             {cartView? <Modal onClose={()=>{setCartView(false)}}><Cart/></Modal>:null}
             <a className="nav-link active fs-5 text-black" onClick={handleLogout}>Logout</a> 

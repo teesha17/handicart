@@ -17,7 +17,7 @@ export default function Card(props) {
     console.log(data);
   };
   const handleViewMore=async()=>{
-    //navigate('/viewmore');
+    navigate('/viewmore');
     const cardData = {
       id: props.foodItem._id,
       name: props.foodItem.name,

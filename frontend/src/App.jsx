@@ -25,7 +25,7 @@ function App() {
         <Route path='/createuser' element={<SignUp/>}/>
         <Route exact path="/myorder" element={<MyOrder />} />
         <Route path="/payment" element={<Payment/>}/>
-        {/* <Route path="/viewmore" element={<ViewMore/>}/> */}
+        <Route path="/viewmore" element={<ViewMore/>}/>
       </Routes>
     </div>
   </Router>

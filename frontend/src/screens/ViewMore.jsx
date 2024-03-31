@@ -38,7 +38,7 @@ export default function ViewMore() {
       </div>
       <div class="product-price-btn">
         <p className='view-span'>Rs. {data.price}</p><br/>
-        <button type="button"><Link to="https://wa.me/qr/4LS4RESPI4LFI1" style={{textDecoration:'none',color:"white"}}>Order On WhatsApp</Link></button>
+        <button type="button"></button>
       </div>
     </div>
   </div>
