@@ -43,7 +43,7 @@ export default function MyOrder() {
                 <Navbar />
             </div>
 
-            <div className='container'>
+            {/* <div className='container'>
                 <div className='row'>
 
                 {Object.keys(orderData).length !== 0 ? Array(orderData).map(data => {
@@ -94,10 +94,9 @@ export default function MyOrder() {
                 </div>
 
 
-            </div>
+            </div> */}
 
             <Footer />
         </div>
     )
 }
-// {"orderData":{"_id":"63024fd2be92d0469bd9e31a","email":"mohanDas@gmail.com","order_data":[[[{"id":"62ff20fbaed6a15f800125e9","name":"Chicken Fried Rice","qty":"4","size":"half","price":520},{"id":"62ff20fbaed6a15f800125ea","name":"Veg Fried Rice","qty":"4","size":"half","price":440}],"2022-08-21T15:31:30.239Z"],[[{"id":"62ff20fbaed6a15f800125f4","name":"Mix Veg Pizza","qty":"4","size":"medium","price":800},{"id":"62ff20fbaed6a15f800125f3","name":"Chicken Doub;e Cheeze Pizza","qty":"4","size":"regular","price":480}],"2022-08-21T15:32:38.861Z"]],"__v":0}}

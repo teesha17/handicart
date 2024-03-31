@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Footer from '../components/footer/Footer.jsx';
 import Navbar from '../components/navbar/Navbar.jsx';
 import Card from '../components/card/Card.jsx';
-
-import './items.css'
 export default function items() {
   const [search, setSearch] = useState('');
   const [foodCat, setFoodCat] = useState([]);
@@ -40,13 +38,13 @@ export default function items() {
   return (
     <div>
    <Navbar/>
-      <div >
+      {/* <div >
       <div class="px-4 py-5 my-0 text-center">
         
         
         <form class="d-flex m-1" style={{width:'25%',justifyContent:"flex-end"}}>
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={search} onChange={handleChange}/>
-            {/* <button class="btn btn-outline-success" type="submit">Search</button> */}
+           
         </form>
       </div>
     </div>
@@ -65,7 +63,7 @@ export default function items() {
               ))}
           </div>
         ))}
-      </div>
+      </div> */}
 <Footer/>
     </div>
   );

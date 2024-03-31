@@ -2,13 +2,11 @@ import React,{useState} from 'react';
 import './Home.css';
 import Navbar from '../components/navbar/Navbar.jsx';
 import Footer from '../components/footer/Footer.jsx';
-
-
 export default function Home() {
   return (
     <div>
 <Navbar/>
-<h1 className='my-5'style={{textAlign:'center'}}>HAPPY SHOPPING!!</h1>
+{/* <h1 className='my-5'style={{textAlign:'center'}}>HAPPY SHOPPING!!</h1>
 <div class="row my-5">
 
 		<div class="col-md-4 col-sm-6 col-xs-12">
@@ -152,7 +150,7 @@ export default function Home() {
 </div>
   </div>
 
-  
+   */}
  <Footer/>
 
   </div>

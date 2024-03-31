@@ -24,7 +24,7 @@ export default function ViewMore() {
             </div>
         </div> */}
 
-<div class="wrapper">
+{/* <div class="wrapper">
     <div class="product-img">
       <img src={data.img} className='view-img'/>
     </div>
@@ -40,7 +40,7 @@ export default function ViewMore() {
         <button type="button"></button>
       </div>
     </div>
-  </div>
+  </div> */}
         </>
     );
 }
