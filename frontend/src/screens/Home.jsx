@@ -1,9 +1,8 @@
 import React,{useState} from 'react';
 import './Home.css';
-import Navbar from '../components/navbar/Navbar';
-import Footer from '../components/footer/Footer';
-import { useEffect } from 'react';
-import Spline from '@splinetool/react-spline';
+import Navbar from '../components/navbar/Navbar.jsx';
+import Footer from '../components/footer/Footer.jsx';
+
 
 export default function Home() {
   return (

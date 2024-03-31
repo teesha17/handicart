@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
-import { useCart, useDispatchCart } from '../../components/contextReducer/ContextReducer';
-import { useNavigate } from 'react-router-dom';
+import { useCart, useDispatchCart } from '../../components/contextReducer/ContextReducer.jsx';
 import './Cart.css';
 export default function Cart() {
   let data = JSON.parse(localStorage.getItem('cart')) || [];
   let dispatch = useDispatchCart();
-  const navigate = useNavigate();
+ 
 
   if (data.length === 0) {
     return (
@@ -32,7 +31,6 @@ export default function Cart() {
     if (response.status === 200) {
       dispatch({ type: "DROP" });
     }
-    navigate("/payment");
   };
  
   let totalPrice = data.reduce((total, food) => total + parseInt(food.price), 0);
@@ -66,7 +64,7 @@ export default function Cart() {
         </table>
         <div><h1 className='fs-2' style={{ color: 'black' }}>Total Price: {totalPrice}/-</h1></div>
         <div>
-          <button className='btn bg-danger mt-5' onClick={handleCheckOut}>Check Out</button>
+          <button className='btn bg-danger mt-5'>Check Out</button>
         </div>
       </div>
     </div>

@@ -70,9 +70,9 @@
 import React, { useState } from 'react'
 import Badge from 'react-bootstrap/Badge';
 import {Link ,useNavigate} from 'react-router-dom'
-import Modal from '../../Modal';
-import Cart from '../../screens/cart/Cart';
-import { useCart } from '../contextReducer/ContextReducer';
+import Modal from '../../Modal.jsx';
+import Cart from '../../screens/cart/Cart.jsx';
+import { useCart } from '../contextReducer/ContextReducer.jsx';
 import './Navbar.css'
 
 const Navbar = () => {

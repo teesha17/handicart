@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { Link ,json,useNavigate} from 'react-router-dom';
-import Navbar from '../components/navbar/Navbar';
+import Navbar from '../components/navbar/Navbar.jsx';
 
 export default function Login() {
   const [credentials , setCredentials] = useState({

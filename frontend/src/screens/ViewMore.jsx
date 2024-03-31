@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Navbar from '../components/navbar/Navbar';
+import Navbar from '../components/navbar/Navbar.jsx';
 import './ViewMore.css'
 export default function ViewMore() {
     const data = JSON.parse(localStorage.getItem("cardData"));

@@ -1,8 +1,8 @@
 import React,{useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useDispatchCart, useCart } from '../contextReducer/ContextReducer';
-import Modal from '../../Modal';
-import ViewMore from '../../screens/ViewMore';
+import { useDispatchCart, useCart } from '../contextReducer/ContextReducer.jsx';
+import Modal from '../../Modal.jsx';
+import ViewMore from '../../screens/ViewMore.jsx';
 import { json } from 'react-router-dom';
 import './Card.css'
 export default function Card(props) {
