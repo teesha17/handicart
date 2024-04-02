@@ -8,7 +8,6 @@ export default function Card(props) {
   let foodItem = props.foodItems; // Corrected prop name
   let dispatch = useDispatchCart();
   let data = useCart();
-  const[cartView,setCartView]=useState(false);
   const navigate=useNavigate();
   const handleAddToCart = async () => {
     await dispatch({ type: "ADD", id: props.foodItem._id,name:props.foodItem.name, price: props.foodItem.price,img:props.foodItem.img }); // Access foodItem directly
