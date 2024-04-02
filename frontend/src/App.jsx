@@ -11,6 +11,7 @@ import {BrowserRouter as Router,
 } from 'react-router-dom';
 import SignUp from './screens/SignUp.jsx';
 import { CartProvider } from './components/contextReducer/ContextReducer.jsx';
+import Cart from './screens/cart/Cart.jsx';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/createuser' element={<SignUp/>}/>
         <Route path="/myorder" element={<MyOrder />} />
         <Route path="/viewmore" element={<ViewMore/>}/>
+        <Route path="/cart" element={<Cart/>}/>
       </Routes>
     </div>
   </Router>
