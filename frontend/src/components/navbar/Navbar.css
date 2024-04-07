@@ -18,9 +18,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:rgba(0, 0, 0, 0.1);
+    
     padding: 0.5% 0;
-    box-shadow: 2px 1px 10px rgb(11, 11, 11);
+}
+.navtext{
+    text-decoration: none;
 }
 
 .navBar .jscop {
@@ -38,17 +40,17 @@
     align-items: center;
 }
 
-.navBar a {
+.navBar .navtext {
     color: rgb(0, 0, 0);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0 10px;
     padding: 4px 6px;
     transition: 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
     text-transform: uppercase;
 }
 
-.navBar a:hover {
+.navBar .navtext:hover {
     transform: scale(1.1);
     font-weight: 400; 
     text-decoration: none;
@@ -59,7 +61,7 @@
 
 @media only screen and (max-width:1160px) {
 
-    .navBar a {
+    .navBar .navtext {
         margin: 0 6px;
         font-size: 1.1rem;
     }
@@ -98,7 +100,7 @@
 
     .navbar-items {
         flex-direction: column;
-        background-color:rgba(188, 160, 160, 0.9);
+        background-color:rgba(255, 255, 255, 0.9);
         width: 100%;
         padding: 20%;
         margin-top: -2500px;
@@ -116,7 +118,7 @@
         font-weight: 500;
     }
 
-    .navBar a:hover {
+    .navBar .navtext:hover {
         background-color: #4e239b;
         border-radius: 5%;
         padding: 1px 10px;

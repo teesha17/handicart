@@ -47,18 +47,18 @@ let navigate = useNavigate();
   return (
     <div>
       <>
-    <div className='container'>
+    <div className='container d-flex justify-content-center align-items-center' style={{height:"100vh",width:""}}>
       <form onSubmit={handleSubmit}>
   <div className="form-group">
     <label htmlFor="exampleInputEmail1">Email address</label>
     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" value={credentials.email} onChange={handleChange}/>
-    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+    
   </div>
   <div className="form-group">
     <label htmlFor="exampleInputPassword1">Password</label>
     <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" name="password" value={credentials.password} onChange={handleChange}/>
   </div>
-  <button type="submit" className="m-3 btn btn-success">Submit</button>
+  <button type="submit" className="m-3 btn btn-dark">Submit</button><br></br>
   <Link to="/createuser" className='m-3 btn btn-danger'>Not a user?</Link>
 </form>
 </div>

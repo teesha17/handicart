@@ -88,7 +88,7 @@ export default function MyOrder() {
                                         })
 
                                     )
-                                }) : ""
+                                }) : <div style={{height:"100vh",textAlign:"center"}}><h1>you do not have any orders</h1></div>
                         )
                     }) : ""}
                 </div>

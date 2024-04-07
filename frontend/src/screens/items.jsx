@@ -38,7 +38,7 @@ export default function items() {
   return (
     <div>
    <Navbar/>
-      {/* <div >
+       <div >
       <div class="px-4 py-5 my-0 text-center">
         
         
@@ -57,13 +57,12 @@ export default function items() {
               .filter(item => item.CategoryName === data.CategoryName && item.name.toLowerCase().includes(search.toLowerCase()))
               .map(filterItems => (
                 <div key={filterItems._id} className='col-12 col-md-6 col-lg-6'>
-                  <Card 
-                  foodItem={filterItems}/>
+                  <Card foodItem={filterItems}/>
                 </div>
               ))}
           </div>
         ))}
-      </div> */}
+      </div> 
 <Footer/>
     </div>
   );

@@ -28,7 +28,7 @@ export default function Card(props) {
   }
 
   return (
-    <div class="container-card" style={{backgroundImage:`url(${props.foodItem.img})`}} onClick={handleViewMore}>
+    <div class="container-card" style={{backgroundImage:`url(${props.foodItem.img})`}} >
       
   <div class="overlay">
     <div class = "items"></div>
@@ -46,6 +46,7 @@ export default function Card(props) {
 </svg>
 
       <span onClick={handleAddToCart}>ADD TO CART</span>
+      <span onClick={handleViewMore}>VIEW MORE</span>
       <br/>
       
   </div>

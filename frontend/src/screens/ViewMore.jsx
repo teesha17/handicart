@@ -1,12 +1,14 @@
 import React from 'react';
 import Navbar from '../components/navbar/Navbar.jsx';
+import { Link } from 'react-router-dom';
+import './ViewMore.css'
 export default function ViewMore() {
     const data = JSON.parse(localStorage.getItem("cardData"));
 
     return (
         <>
         <Navbar/>
-        {/* <div className="container">
+         {/* <div className="container">
             <div className="row">
                 <div className="col-md-6 col-lg-6 col-sm-12">
                     <img src={data.img} className="img-fluid" alt={data.name} />
@@ -21,9 +23,9 @@ export default function ViewMore() {
                     </div>
                 </div>
             </div>
-        </div> */}
+        </div>  */}
 
-{/* <div class="wrapper">
+ <div class="wrapper">
     <div class="product-img">
       <img src={data.img} className='view-img'/>
     </div>
@@ -36,10 +38,12 @@ export default function ViewMore() {
       </div>
       <div class="product-price-btn">
         <p className='view-span'>Rs. {data.price}</p><br/>
-        <button type="button"></button>
+        <button className="btn btn-success rounded m-3">
+            <Link to="https://wa.me/qr/4LS4RESPI4LFI1" style={{textDecoration:"none",color:"white"}}>Chat On WhatsApp</Link>
+        </button>
       </div>
     </div>
-  </div> */}
+  </div> 
         </>
     );
 }

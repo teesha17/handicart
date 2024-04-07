@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { useCart, useDispatchCart } from '../../components/contextReducer/ContextReducer.jsx';
 import './Cart.css';
+import Navbar from '../../components/navbar/Navbar.jsx';
+import Footer from '../../components/footer/Footer.jsx';
+import { Link } from 'react-router-dom';
 export default function Cart() {
   let data = JSON.parse(localStorage.getItem('cart')) || [];
   let dispatch = useDispatchCart();
@@ -36,8 +39,9 @@ export default function Cart() {
   let totalPrice = data.reduce((total, food) => total + parseInt(food.price), 0);
 
   return (
-    <div>
-      <div className='container m-auto mt-5 table-responsive table-responsive-sm table-responsive-md' >
+    <div >
+      <Navbar/>
+      <div className='container m-auto mt-5 table-responsive table-responsive-sm table-responsive-md' style={{height:"100vh"}} >
         <table className='table table-hover' style={{ backgroundColor: 'lightblue' }}>
           <thead className='text-info fs-4'>
             <tr>
@@ -64,9 +68,22 @@ export default function Cart() {
         </table>
         <div><h1 className='fs-2' style={{ color: 'black' }}>Total Price: {totalPrice}/-</h1></div>
         <div>
-          <button className='btn bg-danger mt-5'>Check Out</button>
+          {/* <button className='btn bg-danger mt-5'><Link to="https://rzp.io/l/B97WEVpMK7">Checkout</Link></button> */}
+
+          <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_Nu88U7cP7p40bJ/view" data-text="Pay Now" data-color="#528FF0" data-size="large">
+  <script>
+    {(function(){
+      var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
+      if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
+      s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__'];
+      rzp && rzp.init && rzp.init()}})()
+    }
+  </script>
+</div>
+    
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

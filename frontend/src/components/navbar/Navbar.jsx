@@ -37,34 +37,34 @@ const Navbar = () => {
           </div>
           
           <div className={`navbar-items ${isMobileMenuOpen ? "mobilemenu" : ""}`}>
-            <a onClick={closeMobileMenu}>
-            <Link to='/' style={{color:'black'}}>Home</Link>
-            </a>
-            <a onClick={closeMobileMenu}>
-            <Link to='/items' style={{color:'black'}}>Products</Link>
-            </a>
+            <div className='navtext' onClick={closeMobileMenu}>
+            <Link to='/' style={{textDecoration:"none",color:"black"}}>Home</Link>
+            </div>
+            <div className='navtext' onClick={closeMobileMenu}>
+            <Link to='/items' style={{textDecoration:"none",color:"black"}}>Products</Link>
+            </div>
             {(localStorage.getItem("authToken"))?
-        <a onClick={closeMobileMenu}>
-         <Link className="nav-link active fs-5 text-black" aria-current="page" to="/myorder">My Orders</Link>
-        </a>:""}
+        <div className='navtext' onClick={closeMobileMenu}>
+         <Link className="nav-link active text-black" aria-current="page" to="/myorder">My Orders</Link>
+        </div>:""}
 
 
 
         {
             (localStorage.getItem("authToken"))?
             <>
-              <a className="nav-link active fs-5 text-black">
-              <Link to='/cart' style={{color:'black'}}>My Cart</Link> <Badge pill bg="danger">{items.length+1}</Badge>
-            </a>
-            <a className="nav-link active fs-5 text-black" onClick={handleLogout}>Logout</a> 
+              <div className="nav-link active text-black navtext">
+              <Link to='/cart' style={{textDecoration:"none",color:"black"}}>My Cart</Link> <Badge pill bg="danger">{items.length}</Badge>
+            </div>
+            <div  className="nav-link active text-black navtext" onClick={handleLogout}>Logout</div> 
             </>
             : <>
-                <a onClick={closeMobileMenu}>
-            <Link to='/login' style={{color:'black'}}>Login</Link>
-            </a>
-            <a onClick={closeMobileMenu}>
-            <Link to='/createuser' style={{color:'black'}}>SignIn</Link>
-            </a></>
+                <div className='navtext' onClick={closeMobileMenu}>
+            <Link to='/login'>Login</Link>
+            </div>
+            <div className='navtext' onClick={closeMobileMenu}>
+            <Link to='/createuser'>SignIn</Link>
+            </div></>
           }
           </div>
         </div>
