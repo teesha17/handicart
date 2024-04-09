@@ -1,3 +1,129 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
+
+.hero{
+    height: 60vh;
+	background-image: url('');
+}
+
+
+.card{
+	position: relative;
+	height: 200px;
+	width: 100%;
+	margin: 10px 0;
+	transition: ease all 2.3s;
+	perspective: 1200px;
+	border-radius: 50%;
+	background-color: white;
+	&:hover{
+		.cover{
+			
+			&:before{
+				transform: translateZ(30px);
+			}
+			
+			h1{
+				transform: translateZ(100px);
+			}
+		}
+	}
+	
+	.cover{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		transform-style: preserve-3d;
+  	transition: ease all 2.3s;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		border-radius: 50%;
+		&:before{
+			content: '';
+			position: absolute;
+			border: 5px solid rgba(255,255,255,.5);
+			border-radius: 50%;
+			box-shadow: 0 0 12px rgba(0,0,0,.3); 
+			top:20px;
+			left:20px;
+			right:20px;
+			bottom:20px;
+			z-index: 2;
+			transition: ease all 2.3s;
+			transform-style: preserve-3d;
+			transform: translateZ(0px);
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			top:0px;
+			left:0px;
+			right:0px;
+			bottom:0px;
+			z-index: 2;
+			transition: ease all 1.3s;
+			
+		}
+		&.item-a{
+			background-image: url('/img2.jpg');
+		}
+		h1{
+			font-weight: 600;
+			position: absolute;
+			bottom: -55px;
+			left: 50px;
+			color: rgb(0, 0, 0);
+			transform-style: preserve-3d;
+  		transition: ease all 2.3s;
+			z-index:3;
+			font-size: 2em;
+			transform: translateZ(0px);
+		}
+		.price{
+			font-weight: 200;
+			position: absolute;
+			top: 55px;
+			right: 50px;
+			color: white;
+			transform-style: preserve-3d;
+  		transition: ease all 2.3s;
+			z-index:4;
+			font-size: 2em;
+			transform: translateZ(0px);
+		}
+	}
+}
+
+.banner{
+	height:40vh;
+	background-image: url("/img2.jpg");
+	display:flex;
+	justify-content: center;
+	align-items:center;
+}
+.shopnow{
+	background-color: rgba(255, 255, 255, 0);
+	border:1px solid white;
+	color:white;
+	width:15%;
+	border-radius: 3px;
+
+}
+.shopnow:hover{
+	background-color: rgb(194, 237, 223);
+	transition: ease 1s;
+}
+.trending-images{
+	height:60vh;
+	width:100%;
+	margin:5%;
+}
+.trending-row{
+	display: flex;
+	
+} */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
 
 .hero{
@@ -8,7 +134,7 @@
 
 .card{
 	position: relative;
-	height: 400px;
+	height: 250px;
 	width: 100%;
 	margin: 10px 0;
 	transition: ease all 2.3s;
@@ -82,7 +208,7 @@
 			transform-style: preserve-3d;
   		transition: ease all 2.3s;
 			z-index:3;
-			font-size: 3em;
+			font-size: 2em;
 			transform: translateZ(0px);
 		}
 		.price{
@@ -128,3 +254,43 @@
 		}
 	}
 }
+
+
+.banner{
+	height:40vh;
+	background-image: url("/img2.jpg");
+	display:flex;
+	justify-content: center;
+	align-items:center;
+	margin-bottom: 60px;
+}
+.shopnow{
+	background-color: rgba(255, 255, 255, 0);
+	border:1px solid white;
+	color:white;
+	width:15%;
+	border-radius: 3px;
+
+}
+.shopnow:hover{
+	background-color: rgb(194, 237, 223);
+	transition: ease 1s;
+}
+.trending{
+	margin:2%;
+}
+.trending h1{
+	text-align: center;
+	color: rgb(219, 127, 21);
+	font-weight: 400;
+	font-size: 2rem;
+}
+.trending-images{
+	height:60vh;
+	width:70%;
+	margin:5%;
+}
+.trending-row{
+	display: flex;
+	
+} 

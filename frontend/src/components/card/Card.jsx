@@ -28,7 +28,7 @@ export default function Card(props) {
   }
 
   return (
-    <div class="container-card" style={{backgroundImage:`url(${props.foodItem.img})`}} >
+    <div class="container-card col-md-4" style={{backgroundImage:`url(${props.foodItem.img})`}} >
       
   <div class="overlay">
     <div class = "items"></div>

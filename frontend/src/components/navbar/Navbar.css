@@ -16,13 +16,14 @@
 
 .navBar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     
     padding: 0.5% 0;
 }
 .navtext{
     text-decoration: none;
+    transition: background-size 0.2s ease-in-out
 }
 
 .navBar .jscop {
@@ -50,14 +51,28 @@
     text-transform: uppercase;
 }
 
-.navBar .navtext:hover {
-    transform: scale(1.1);
+.navBar .navtext{
+   
     font-weight: 400; 
-    text-decoration: none;
-    background-color: rgba(104, 102, 102,0.3);
-    border-radius: 10px;
-}
+    color: saddlebrown;
+text-decoration: none;
+background-image: linear-gradient(#b9365d, #d9af5a);
+background-size: 0% 0.1em;
+background-position-y: 100%;
+background-position-x: 100%;
+background-repeat: no-repeat;
+transition: background-size 0.7s ease-in-out;
 
+
+}
+.navBar .navtext:hover{
+    transform: scale(1.1);
+    background-size: 100% 0.1em;
+background-position-x: 0%;
+}
+.logo-ssc{
+    height:20vh;
+}
 
 @media only screen and (max-width:1160px) {
 
