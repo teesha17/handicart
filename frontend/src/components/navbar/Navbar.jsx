@@ -248,10 +248,10 @@ const Navbar = () => {
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
               </svg>
               {isSearchMenuOpen?
-                <div style={{zIndex:1000,position:"absolute",top:"0",left:"0",width:"100vw"}} className='searchdrop'>
-                  <div >
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search" value={search} onChange={handleChange} />
-                    <svg onClick={closeSearchMenu} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <div style={{zIndex:1000,position:"absolute",top:"0",left:"0",width:"100vw",background:"white"}} className='searchdrop'>
+                  <div style={{display:"flex",justifyContent:"center"}}>
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search" value={search} onChange={handleChange} style={{width:"80vw"}} />
+                    <svg onClick={closeSearchMenu} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-x-lg" viewBox="0 0 16 16">
                       <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
                     </svg>
                   </div>
@@ -259,20 +259,22 @@ const Navbar = () => {
                     <div style={{background:"white"}}key={index}>{item.name}<img style={{width:"20px"}} src={item.img}/></div>
                     
                   ))}
-                </div>:<    ></>
+                </div>:<></>
               }
             </div>
            <Link to="/"><img src="/SHEFALI’S CREATIVE CORER (2).png" className='logo-ssc'></img></Link> 
+           <div style={{width:"6vw"}}>
             {localStorage.getItem('authToken') &&
-              <div>
+              <div >
                 <Link to='/cart'>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" class="bi bi-bag" viewBox="0 0 16 16">
                     <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
                   </svg>
                 </Link>
-                <Badge pill bg="dark" style={{ position: "absolute" }}>{items.length}</Badge>
+                <Badge pill bg="dark" style={{ position: "absolute",top:"20vh" }}>{items.length}</Badge>
               </div>
             }
+            </div>
           </div>
           <div className="navBar">
             <div className="hamburger" onClick={toggleMobileMenu}>
@@ -299,10 +301,10 @@ const Navbar = () => {
                 :
                 <>
                   <div className='navtext' onClick={closeMobileMenu}>
-                    <Link to='/login'>Login</Link>
+                    <Link style={{ textDecoration: "none", color: "black" }}to='/login'>Login</Link>
                   </div>
                   <div className='navtext' onClick={closeMobileMenu}>
-                    <Link to='/createuser'>SignIn</Link>
+                    <Link style={{ textDecoration: "none", color: "black" }} to='/createuser'>SignIn</Link>
                   </div>
                 </>
               }

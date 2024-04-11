@@ -49,7 +49,9 @@ export default function SignUp()
 
   return (
     <>
-    <div className='container'>
+    <div className='container' style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",height:"100vh"}}>
+      <h1>Welcome !!</h1>
+      <Link to="/"><img src="/SHEFALI’S CREATIVE CORER (2).png" className='logo-ssc'></img></Link> 
       <form onSubmit={handleSubmit}>
       <div className="form-group">
     <label htmlFor="name">Name</label>
