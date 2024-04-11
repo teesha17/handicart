@@ -15,14 +15,15 @@ export default function Card(props) {
     console.log(data);
   };
   const handleViewMore=async()=>{
-    navigate('/viewmore');
+     
     const cardData = {
       id: props.foodItem._id,
       name: props.foodItem.name,
       price: props.foodItem.price,
       img: props.foodItem.img
     };
-  
+    const encodedProductName = encodeURIComponent(props.foodItem.name);
+    navigate(`/viewmore/${encodedProductName}`);
     localStorage.setItem("cardData", JSON.stringify(cardData));
     console.log(localStorage.getItem("cardData"));
   }
@@ -33,6 +34,7 @@ export default function Card(props) {
       <div class = "items"></div>
     
   <div class="overlay">
+  <button className='addtocart' onClick={handleViewMore}>View More</button>
       <button className='addtocart' onClick={handleAddToCart}>Add To Cart</button>
   </div>
 </div>

@@ -31,6 +31,7 @@
   height: 100%;
   width: 100%;
   display: flex;
+  
   align-items: flex-end;
   justify-content: center;
   opacity: 0;
@@ -40,7 +41,10 @@
   background-size: cover;
   color: #FEF5DF;
 }
-
+.view-more{
+  height: 100%;
+  justify-content: center;
+}
 
 .items {
   display: flex;
