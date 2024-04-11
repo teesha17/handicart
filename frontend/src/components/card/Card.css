@@ -1,7 +1,7 @@
 .container-card {
   width: 100%;
-  height: 300px;
-  margin: 2%;
+  height: 400px;
+  margin:0;
   background-color: black;
   background-size: cover;
   cursor: pointer;
@@ -9,60 +9,57 @@
   -webkit-box-shadow: 0 0 5px #000;
         box-shadow: 0 0 5px #000;
   }
-
-.overlay {
+.addtocart{
+  background-color: #2d2b2b;
+  border: 0px;
+  color:white;
+  text-align: center;
+  border-radius: 5px;
+  height: 10%;
+  margin:2%;
   width: 100%;
+  transform: translateY(0px);
+  transition: all 0.7s;
+  opacity: 0;
+
+}
+.addtocart:hover{
+  background-color: #ac721a;
+  transition: all 0.4s ease-in-out;
+}
+.overlay {
   height: 100%;
-  
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr 2fr 1fr;
-  
-  background: rgba(77, 77, 77, .9);
-  color: #FEF5DF;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   opacity: 0;
   transition: all 0.5s;
-  
   font-family: 'Playfair Display', serif;
+  background-image: url("img3.jpg");
+  background-size: cover;
+  color: #FEF5DF;
 }
 
 
 .items {
-  padding-left: 20px;
-  letter-spacing: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .head {
-  font-size: 30px;
+  font-size: 1.5rem;
   line-height: 40px;
-  
-  transform: translateY(40px);
-  transition: all 0.7s;
-  hr {
-    display: block;
-    width: 0;
-    
-    border: none;
-    border-bottom: solid 2px #FEF5DF;
-    
-    position: absolute;
-    bottom: 0; left:20px;
-    
-    transition: all .5s;
-  }
+  font-weight: 300;
 }
 
 .price {
-  font-size: 22px;
+  font-size: 1rem;
   line-height: 10px;
-  font-weight: bold;  
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.7s;
-  .old {
-    text-decoration: line-through;
-    color: lighten(rgb(77, 77, 77),40%);
-  }
+  font-weight: bold; 
+  color:#ac721a; 
 }
 
 .cart {
@@ -86,6 +83,10 @@
    .head {
     transform: translateY(0px);
   }
+  .addtocart{
+    transform: translateY(-20px);
+    opacity: 1;
+  }
   
    hr {
     width: 75px;
@@ -103,4 +104,15 @@
     transition-delay: 0.6s;
     opacity: 1;
   }
+}
+
+@media only screen and (max-width:700px) {
+
+  .overlay{
+    opacity: 1;
+  }
+  .addtocart{
+    opacity: 1;
+  }
+  
 }

@@ -3,16 +3,15 @@ import { useCart, useDispatchCart } from '../../components/contextReducer/Contex
 import './Cart.css';
 import Navbar from '../../components/navbar/Navbar.jsx';
 import Footer from '../../components/footer/Footer.jsx';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 export default function Cart() {
   let data = JSON.parse(localStorage.getItem('cart')) || [];
   let dispatch = useDispatchCart();
- 
-
   if (data.length === 0) {
     return (
       <div>
-        <div className='m-5 w-100 text-center fs-3'>The Cart is Empty!</div>
+        <Navbar/>
+        <div style={{width:"100vw",textAlign:"center"}}>The Cart is Empty!</div>
       </div>
     );
   }
@@ -32,8 +31,10 @@ export default function Cart() {
     });
 
     if (response.status === 200) {
-      dispatch({ type: "DROP" });
+      localStorage.removeItem('cart');
+      window.location.href = "https://rzp.io/l/B97WEVpMK7";
     }
+   
   };
  
   let totalPrice = data.reduce((total, food) => total + parseInt(food.price), 0);
@@ -67,10 +68,10 @@ export default function Cart() {
           </tbody>
         </table>
         <div><h1 className='fs-2' style={{ color: 'black' }}>Total Price: {totalPrice}/-</h1></div>
-        <div>
-          {/* <button className='btn bg-danger mt-5'><Link to="https://rzp.io/l/B97WEVpMK7">Checkout</Link></button> */}
+        <div onClick={handleCheckOut}>
+          <button className='btn bg-danger mt-5' onClick={handleCheckOut}>Checkout</button>
 
-          <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_Nu88U7cP7p40bJ/view" data-text="Pay Now" data-color="#528FF0" data-size="large">
+          {/* <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_Nu88U7cP7p40bJ/view" data-text="Pay Now" data-color="#528FF0" data-size="large" >
   <script>
     {(function(){
       var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
@@ -79,7 +80,7 @@ export default function Cart() {
       rzp && rzp.init && rzp.init()}})()
     }
   </script>
-</div>
+</div> */}
     
         </div>
       </div>

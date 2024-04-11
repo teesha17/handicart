@@ -45,10 +45,9 @@ let navigate = useNavigate();
   };
 
   return (
-    <div>
-      <>
-    <div className='container d-flex justify-content-center align-items-center' style={{height:"100vh",width:""}}>
-      <form onSubmit={handleSubmit}>
+   
+    <div className='container d-flex justify-content-center align-items-center' style={{height:"100vh",width:"100vw"}}>
+      <form onSubmit={handleSubmit} style={{width:"30vw"}}>
   <div className="form-group">
     <label htmlFor="exampleInputEmail1">Email address</label>
     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" value={credentials.email} onChange={handleChange}/>
@@ -62,8 +61,7 @@ let navigate = useNavigate();
   <Link to="/createuser" className='m-3 btn btn-danger'>Not a user?</Link>
 </form>
 </div>
-    </>
-    </div>
+   
   )
 }
 

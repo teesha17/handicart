@@ -151,14 +151,12 @@ export default function Home() {
 
 
   return (
-    <div>
+    <div style={{width:"100vw"}}>
 <Navbar/>  
-
-
-<section style={{margin:"2%"}}>
+ <section style={{margin:"2%"}}>
 	<div class="row">
 		{foodCat.map(data=>(
-			<div class="col-md-2 col-sm-6 col-xs-12">
+			<div class="col-md-2 col-sm-4 col-6" >
 			<div class="card">
 				<div class="cover item-a">
 					<h1>{data.CategoryName}</h1>
@@ -168,15 +166,10 @@ export default function Home() {
 		))}
 	</div>
 </section>
-<br/><br/>
-<section>
-	<div className='banner'>
-		<button className='shopnow'>Shop Now</button>
- 	</div>
- </section>
+<hr/>
  <section className='trending'>
 	<br/><br/>
-	<h1>TRENDING</h1><br/>
+	<h1 className='headers'>TRENDING</h1><br/>
 	<div>
 			<div className='row'>
             {foodItem
@@ -195,9 +188,9 @@ export default function Home() {
 	
 	</div>
 
-</section><br/><br/><br/><br/>
+</section><hr/><br/>
 <section className='trending'>
-	<h1>NEW ARRIVALS</h1><br/>
+	<h1 className='headers'>NEW ARRIVALS</h1><br/>
 	<div>
 			<div className='row'>
             {foodItem
@@ -217,11 +210,40 @@ export default function Home() {
 	</div>
 
 </section>
-<section>
+<section className='trending'>
+	<h1 className='headers'>NEW ARRIVALS</h1><br/>
+	<div>
+			<div className='row'>
+            {foodItem
+              .filter(item => item.CategoryName === "trending")
+              .map(filterItems => (
+                
+               
+					<div className=' col-lg-3 col-md-4 col-sm-4 col-xs-4'>
+						<Card foodItem={filterItems}/>
+						</div>
+               
+				
+              ))}
+			   </div>
+			 
+	
+	</div>
 
 </section>
 
-
+{/* <section >
+	<div class="grid-cont" style={{height:"100vh"}}>
+		<div className='class1'>
+			<h3>Long time at home renew it?</h3><br/>
+			<h1>Jute long basket with white border</h1>
+		</div>
+		<div className='class4'>
+		<div className='class2'></div>
+		<div className='class3'></div>
+		</div>
+	</div>
+ </section> */}
 
 
  <Footer/>
