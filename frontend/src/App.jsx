@@ -5,6 +5,7 @@ import Login from './screens/Login.jsx';
 import MyOrder from './screens/MyOrder.jsx';
 import Items from './screens/items.jsx';
 import ViewMore from './screens/ViewMore.jsx';
+import { useSearchParams } from 'react-router-dom';
 import {BrowserRouter as Router,
   Routes,
   Route
@@ -24,7 +25,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/createuser' element={<SignUp/>}/>
         <Route path="/myorder" element={<MyOrder />} />
-        <Route path="/viewmore" element={<ViewMore/>}/>
+        <Route path="/viewmore/:productName" element={<ViewMore/>}/>
         <Route path="/cart" element={<Cart/>}/>
       </Routes>
     </div>

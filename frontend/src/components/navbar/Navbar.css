@@ -9,6 +9,12 @@
     align-items: center;
     gap:5px;
 }
+.search-input{
+    background-color: rgba(185, 54, 93, 0);
+    height: 5vh;
+    border:2px solid rgba(0, 0, 0, 0.853);
+}
+
 .top p{
     margin:0;
 }
@@ -31,7 +37,9 @@ height: 20px;
     top:"0";
     left:"0";
     width:"100vw";
-    background:"white";
+    background:rgba(224, 196, 174, 0.986);
+    height: 20vh;
+    transition: all 5s ease-in;
 }
 .hamburger {
     position: absolute;

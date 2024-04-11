@@ -1,0 +1,12 @@
+.search-item{
+    background-color:rgba(224, 196, 174, 0.986) ;
+    margin: 0;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+.searchitem-img{
+    width:20vw;
+    height: 8vh;
+    margin-right: 20px;
+}

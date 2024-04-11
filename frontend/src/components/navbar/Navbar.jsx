@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import Badge from 'react-bootstrap/Badge';
 import {Link ,useNavigate} from 'react-router-dom'
+import SearchItem from '../searchItem/SearchItem';
 import './Navbar.css'
 
 // const Navbar = () => {
@@ -248,17 +249,17 @@ const Navbar = () => {
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
               </svg>
               {isSearchMenuOpen?
-                <div style={{zIndex:1000,position:"absolute",top:"0",left:"0",width:"100vw",background:"white"}} className='searchdrop'>
-                  <div style={{display:"flex",justifyContent:"center"}}>
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search" value={search} onChange={handleChange} style={{width:"80vw"}} />
+                <div style={{zIndex:1000,position:"absolute",top:"0",left:"0",width:"100vw"}} className='searchdrop'>
+                  <div style={{display:"flex",justifyContent:"center",alignItems:"center",height:"100%"}}>
+                    <input class="search-input" type="search" placeholder="Search" aria-label="Search" value={search} onChange={handleChange} style={{width:"80vw"}} />
                     <svg onClick={closeSearchMenu} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-x-lg" viewBox="0 0 16 16">
                       <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
                     </svg>
                   </div>
-                  {searchResults.map((item, index) => (
-                    <div style={{background:"white"}}key={index}>{item.name}<img style={{width:"20px"}} src={item.img}/></div>
-                    
-                  ))}
+                  {search.trim().length > 0?searchResults.map((item, index) => (
+                    // <div className='search-item'key={index}><img className='searchitem-img' src={item.img}/><div style={{display:"flex",flexDirection:"column"}}><p>{item.name} </p><p>{item.price}</p></div><hr/></div>
+                    <SearchItem foodItem={item} onClick={closeSearchMenu}/>
+                  )):<></>}
                 </div>:<></>
               }
             </div>
