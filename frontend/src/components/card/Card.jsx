@@ -35,7 +35,6 @@ export default function Card(props) {
     
   <div class="overlay">
   <button className='addtocart' onClick={handleViewMore}>View More</button>
-      <button className='addtocart' onClick={handleAddToCart}>Add To Cart</button>
   </div>
 </div>
 <div className='items'>
