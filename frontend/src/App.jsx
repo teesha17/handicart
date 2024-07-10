@@ -5,6 +5,12 @@ import Login from './screens/Login.jsx';
 import MyOrder from './screens/MyOrder.jsx';
 import Items from './screens/items.jsx';
 import ViewMore from './screens/ViewMore.jsx';
+import { useSearchParams } from 'react-router-dom';
+import Kids from './collections/Kids.jsx';
+import Kitchen from './collections/Kitchen.jsx';
+import Walldecor from './collections/Walldecor.jsx';
+import Jwellery from './collections/Jwellery.jsx';
+import CanvasPainting from './collections/CanvasPainting.jsx';
 import {BrowserRouter as Router,
   Routes,
   Route
@@ -26,6 +32,11 @@ function App() {
         <Route path="/myorder" element={<MyOrder />} />
         <Route path="/viewmore/:productName" element={<ViewMore/>}/>
         <Route path="/cart" element={<Cart/>}/>
+        <Route path="/kitchen" element={<Kitchen/>}/>
+        <Route path="/kids" element={<Kids/>}/>
+        <Route path="/jwellery" element={<Jwellery/>}/>
+        <Route path="/walldecor" element={<Walldecor/>}/>
+        <Route path="/canvaspainting" element={<CanvasPainting/>}/>
       </Routes>
     </div>
   </Router>

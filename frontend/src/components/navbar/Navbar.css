@@ -1,72 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600&family=Montserrat:ital,wght@0,100;0,500;0,700;1,100;1,500;1,800&family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@500&family=Rubik:wght@300;400;500;700&family=Ysabeau+SC:wght@300&display=swap');
+/* Navbar.css */
+.cross{
+    position: absolute;
+    top:50px;
+    margin-bottom: 50px;
+}
 
-.top{
-    height:5vh;
+
+.cart-link {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-badge {
+    position: absolute;
+    top: 15px;
+    right: -9px;
+    overflow: hidden;
+}
+
+.navtext.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 999;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top:40px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    min-width: 160px;
+}
+
+.navtext.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.top {
+    height: 5vh;
     background-color: rgb(32, 31, 31);
-    color:#faeedd;
+    color: #faeedd;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:5px;
-}
-.search-input{
-    background-color: rgba(185, 54, 93, 0);
-    height: 5vh;
-    border:2px solid rgba(0, 0, 0, 0.853);
+    gap: 5px;
 }
 
-.top p{
-    margin:0;
+.search-input {
+    background-color: rgba(185, 54, 93, 0);
+    height: 5vh;
+    border: 2px solid rgba(0, 0, 0, 0.853);
 }
-.top svg{
+
+.top p {
+    margin: 0;
+}
+
+.top svg {
     width: 20px;
-height: 20px;
+    height: 20px;
 }
-.top-next{
+
+.top-next {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.searchBar{
-    width:100%;
+
+.searchBar {
+    width: 100%;
     z-index: 999;
 }
-.searchdrop{
-    z-index:1000;
-    position:"absolute";
-    top:"0";
-    left:"0";
-    width:"100vw";
-    background:rgba(224, 196, 174, 0.986);
+
+.searchdrop {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: rgba(224, 196, 174, 0.986);
     height: 20vh;
     transition: all 5s ease-in;
 }
+
 .hamburger {
     position: absolute;
     top: 10%;
-    right: 6%;
+    left: 5%;
     display: none;
-    margin-top:20px ;
+    margin-top: 20px;
 }
 
 .hamburger .line {
     width: 25px;
     height: 3px;
     margin-top: 6px;
-    background-color:rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
 }
 
 .navBar {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    padding: 0.5% 0;
 }
 
-.navtext{
+.navtext {
     text-decoration: none;
-    transition: background-size 0.2s ease-in-out
+    transition: background-size 0.2s ease-in-out;
+    
 }
 
 .navBar .jscop {
@@ -75,16 +129,15 @@ height: 20px;
     letter-spacing: 1px;
     cursor: pointer;
     color: rgb(0, 0, 0);
-    margin-left:2%;
+    margin-left: 2%;
 }
 
 .navbar-items {
     display: flex;
     justify-content: center;
     align-items: start;
+    margin-right:10px;
 }
-
-
 
 .navBar .navtext {
     color: rgb(0, 0, 0);
@@ -96,61 +149,59 @@ height: 20px;
     text-transform: uppercase;
 }
 
-.navBar .navtext{
-   
+.navBar .navtext {
     font-weight: 400; 
     color: saddlebrown;
-text-decoration: none;
-background-image: linear-gradient(#b9365d, #d9af5a);
-background-size: 0% 0.1em;
-background-position-y: 100%;
-background-position-x: 100%;
-background-repeat: no-repeat;
-transition: background-size 0.7s ease-in-out;
-
-
+    text-decoration: none;
+    background-image: linear-gradient(#b9365d, #d9af5a);
+    background-size: 0% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.7s ease-in-out;
 }
-.navBar .navtext:hover{
+
+.navBar .navtext:hover {
     transform: scale(1.1);
     background-size: 100% 0.1em;
-background-position-x: 0%;
-}
-.logo-ssc{
-    height:20vh;
+    background-position-x: 0%;
 }
 
-@media only screen and (max-width:1160px) {
+.logo-ssc {
+    height: 10vh;
+}
 
+@media only screen and (max-width: 1160px) {
     .navBar .navtext {
         margin: 0 6px;
         font-size: 1.1rem;
     }
 }
 
-@media only screen and (max-width:850px) {
-   
+@media only screen and (max-width: 850px) {
+    
     .hamburger {
         display: block;
         cursor: pointer;
         height: 40px;
+        z-index: -1;
     }
 
     .navbar-fixed {
         width: 100vw;
-        height:100px;
+        height: 100px;
     }
 
     .navBar {
         padding: 0;
-        position:absolute;
+        position: absolute;
         top: 5vh;
         left: 0;
         right: 0;
         z-index: 999;
         height: 100px;
-       
     }
-  
+
     .navBar .jscop {
         position: absolute;
         top: 0;
@@ -159,54 +210,60 @@ background-position-x: 0%;
     }
 
     .navbar-items {
+        position: fixed;
+        top: 0;
+        left: -100%;
         flex-direction: column;
-        background-color:#faeedd;
-        width: 100%;
-        padding: 20%;
-        margin-top: -2500px;
-        transition: all 0.8s ease-in-out;
-        border-bottom-right-radius: 15%;
-        border-bottom-left-radius: 15%;
+        background-color: #faeedd;
+        width: 50%;
+        height: 100%;
+        padding-top: 40px;
+        padding-left: 40px;
+        transition: all 0.3s ease-in-out;
     }
 
     .mobilemenu {
-        margin-top: 45%;
+        left: 0;
     }
-
-
 
     .navBar .navtext:hover {
         background-color: #faeedd;
         border-radius: 5%;
-        padding: 1px 10px;
         color: rgb(0, 0, 0);
     }
-    svg{
+    .navtext{
+        height:100px;
+    }
+    .mobile-link{
+        font-size: 1.5rem;
+    }
+
+    svg {
         height: 30px;
         width: 30px;
     }
 
+
+    
 }
 
-@media only screen and (max-width:520px) {
-
+@media only screen and (max-width: 520px) {
     .hline1 {
         width: 80%;
     }
 
     .hline2 {
         width: 80%;
-        display:block;
-
+        display: block;
     }
 
     .hamburger {
         top: 0;
-        color:black;
+        color: black;
+        z-index: 999;
     }
 
     .navBar {
-      
         height: 50px;
     }
 

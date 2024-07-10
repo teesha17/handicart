@@ -3,3 +3,11 @@
     --bs-table-bg: #ffffff;
     --bs-table-hover-color: #ffffff;
 }
+.remove{
+    border: none;
+    background-color: #00000000;
+    height:50px;
+}
+.cart-img{
+    height:100px;
+}
