@@ -5,7 +5,6 @@ import Login from './screens/Login.jsx';
 import MyOrder from './screens/MyOrder.jsx';
 import Items from './screens/items.jsx';
 import ViewMore from './screens/ViewMore.jsx';
-import { useSearchParams } from 'react-router-dom';
 import {BrowserRouter as Router,
   Routes,
   Route
