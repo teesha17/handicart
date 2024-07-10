@@ -142,18 +142,10 @@ export default function Home() {
 	useEffect(() => {
 	  loadData();
 	}, []);
-  
-
-
-
-
-
-
-
   return (
     <div style={{width:"100vw"}}>
 <Navbar/>  
- <section style={{margin:"2%"}}>
+ {/* <section style={{margin:"2%"}}>
 	<div class="row">
 		{foodCat.map(data=>(
 			<div class="col-md-2 col-sm-4 col-6" >
@@ -165,7 +157,7 @@ export default function Home() {
 		</div>
 		))}
 	</div>
-</section>
+</section> */}
 <hr/>
  <section className='trending'>
 	<br/><br/>
