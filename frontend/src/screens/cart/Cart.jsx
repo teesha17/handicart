@@ -51,7 +51,7 @@ export default function Cart() {
       message += `\nTotal Price: ${totalPrice}/-`;
 
       // Create WhatsApp URL
-      let whatsappURL = `https://wa.me/qr/CARTWW35ESVNN1/?text=${encodeURIComponent(message)}`;
+      let whatsappURL = `https://wa.me/?text=${encodeURIComponent(message)}`;
 
       // Open WhatsApp URL
       //window.open(whatsappURL, "_blank");
