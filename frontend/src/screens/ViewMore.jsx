@@ -41,7 +41,7 @@ export default function ViewMore() {
           <div className="product-price-btn">
             <p className='view-span'>Rs. {data.price}</p><br />
             <button className="btn btn-success rounded">
-              <Link to="https://wa.me/qr/4LS4RESPI4LFI1" style={{ textDecoration: "none", color: "white" }}>Order On WhatsApp</Link>
+              <Link to="https://wa.me/qr/CARTWW35ESVNN1" style={{ textDecoration: "none", color: "white" }}>Order On WhatsApp</Link>
             </button>
             <button className="btn btn-success rounded my-3" onClick={handleAddCart}>
               Add to cart

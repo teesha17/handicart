@@ -42,7 +42,22 @@ export default function Cart() {
 
     if (response.status === 200) {
       localStorage.removeItem('cart');
-      window.location.href = "https://rzp.io/l/B97WEVpMK7";
+
+      // Construct the message with cart details
+      let message = "Order Details:\n\n";
+      data.forEach((item, index) => {
+        message += `${index + 1}. ${item.name} - Qty: ${item.qty}, Price: ${item.price}\n`;
+      });
+      message += `\nTotal Price: ${totalPrice}/-`;
+
+      // Create WhatsApp URL
+      let whatsappURL = `https://wa.me/qr/CARTWW35ESVNN1/?text=${encodeURIComponent(message)}`;
+
+      // Open WhatsApp URL
+      //window.open(whatsappURL, "_blank");
+
+      // Redirect to the payment URL
+      window.location.href = whatsappURL;
     }
   };
 

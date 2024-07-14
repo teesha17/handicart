@@ -327,7 +327,7 @@ const Navbar = () => {
               )}
             </div>
           </div>
-          <div className="navBar">
+          <div className= "navBar">
           <div className="hamburger" onClick={toggleMobileMenu}>
               <div className="line"></div>
               <div className="line"></div>
