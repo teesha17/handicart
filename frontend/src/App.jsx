@@ -11,6 +11,7 @@ import Kitchen from './collections/Kitchen.jsx';
 import Walldecor from './collections/Walldecor.jsx';
 import Jwellery from './collections/Jwellery.jsx';
 import CanvasPainting from './collections/CanvasPainting.jsx';
+import AppChat from './screens/AiChat/Aichat.jsx';
 import {BrowserRouter as Router,
   Routes,
   Route
@@ -36,6 +37,7 @@ function App() {
         <Route path="/kids" element={<Kids/>}/>
         <Route path="/jwellery" element={<Jwellery/>}/>
         <Route path="/walldecor" element={<Walldecor/>}/>
+        <Route path="/chat" element={<AppChat/>}/>
         <Route path="/canvaspainting" element={<CanvasPainting/>}/>
       </Routes>
     </div>

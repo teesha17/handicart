@@ -15,6 +15,7 @@ let navigate = useNavigate();
       email: credentials.email,
       password: credentials.password,}))
     const response =await fetch("https://handicart.onrender.com/api/loginuser",{
+      //const response =await fetch("http://localhost:3000/api/loginuser",{
     method:'POST',
     headers:{
       'Content-Type':'application/json'

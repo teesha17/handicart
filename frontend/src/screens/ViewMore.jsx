@@ -10,7 +10,7 @@ export default function ViewMore() {
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleAddCart = () => {
+  const handleAddCart = async() => {
     const existingCartItems = JSON.parse(localStorage.getItem('cart')) || [];
 
     // Check if the product is already in the cart

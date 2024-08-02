@@ -358,7 +358,7 @@ const Navbar = () => {
               {localStorage.getItem('authToken') ?
                 <>
                   <div className='navtext' onClick={closeMobileMenu}>
-                    <Link to='/orderData' className='mobile-link' style={{ textDecoration: "none", color: "black" }}>My Orders</Link>
+                    <Link to='/myorder' className='mobile-link' style={{ textDecoration: "none", color: "black" }}>My Orders</Link>
                   </div>
                   <div className='navtext' onClick={() => { handleLogout(); closeMobileMenu(); }} style={{ cursor: "pointer", color: "black" }}>
                     <p className='mobile-link'>Logout</p>
@@ -464,10 +464,10 @@ const Navbar = () => {
               {localStorage.getItem('authToken') ?
                 <>
                   <div className='navtext' onClick={closeMobileMenu}>
-                    <Link to='/orderData' className='mobile-link' style={{ textDecoration: "none", color: "black" }}>My Orders</Link>
+                    <Link to='/myorder' className='mobile-link' style={{ textDecoration: "none", color: "black" }}>My Orders</Link>
                   </div>
                   <div className='navtext'  onClick={() => { handleLogout(); closeMobileMenu(); }} style={{ cursor: "pointer", color: "black" }}>
-                    <p className='mobile-link'>Logout</p>
+                    Logout
                   </div>
                 </>
                 :

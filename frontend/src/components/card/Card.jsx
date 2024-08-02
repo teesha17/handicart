@@ -9,7 +9,7 @@ export default function Card(props) {
   let dispatch = useDispatchCart();
   let data = useCart();
   const navigate=useNavigate();
-  const handleAddToCart = async () => {
+  const handleAddCart = async () => {
     await dispatch({ type: "ADD", id: props.foodItem._id,name:props.foodItem.name, price: props.foodItem.price,img:props.foodItem.img }); // Access foodItem directly
         localStorage.setItem('cart', JSON.stringify(data));
     console.log(data);

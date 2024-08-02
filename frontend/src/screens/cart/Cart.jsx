@@ -54,10 +54,10 @@ export default function Cart() {
       let whatsappURL = `https://wa.me/919911223452?text=${encodeURIComponent(message)}`;
 
       // Open WhatsApp URL
-      //window.open(whatsappURL, "_blank");
+      window.open(whatsappURL, "_blank");
 
       // Redirect to the payment URL
-      window.location.href = whatsappURL;
+      window.location.href = "/myorder";
     }
   };
 

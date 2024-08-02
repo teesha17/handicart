@@ -27,11 +27,12 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    top:40px;
+    top:30px;
     background-color: white;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1000;
-    min-width: 160px;
+    min-width: 100px;
+    font-size: 10px;
 }
 
 .navtext.dropdown:hover .dropdown-content {
