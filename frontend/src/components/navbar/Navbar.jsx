@@ -343,6 +343,9 @@ const Navbar = () => {
               <div className='navtext' onClick={closeMobileMenu}>
                 <Link to='/items' className='mobile-link' style={{ textDecoration: "none", color: "black" }}>Products</Link>
               </div>
+              <div className='navtext' onClick={closeMobileMenu}>
+                <Link to='/chat' className='mobile-link' style={{ textDecoration: "none", color: "black" }}>AiChat Room</Link>
+              </div>
               <div className="navtext" onClick={() => openSubMenu('Kids')}>
                 <span className='mobile-link' style={{ textDecoration: "none", color: "black" }}>Kids</span>
                 {isMobileMenuOpen?<IoIosArrowForward />:""}
@@ -426,6 +429,9 @@ const Navbar = () => {
               </div>
               <div className='navtext' onClick={closeMobileMenu}>
                 <Link to='/items' className='mobile-link' style={{ textDecoration: "none", color: "black" }}>Products</Link>
+              </div>
+              <div className='navtext' onClick={closeMobileMenu}>
+                <Link to='/chat' className='mobile-link' style={{ textDecoration: "none", color: "black" }}>AiChat Room</Link>
               </div>
               <div className="navtext dropdown" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
                 <div className='mobile-link' style={{ textDecoration: "none", color: "black" }}>Kids</div>
