@@ -439,9 +439,11 @@ const Navbar = () => {
                 {isDropdownOpen && (
                   <div className="dropdown-content">
                     {/* Add the items for Kids category here */}
-                    <Link to='/kids/toys'>Toys</Link>
-                    <Link to='/kids/clothes'>Clothes</Link>
-                    <Link to='/kids/books'>Books</Link>
+                    <Link to='/kids/kidsnameplates'>Name Plates</Link>
+                    <Link to='/kids/kidsdoorplates'>Door Plates</Link>
+                    <Link to='/kids/kidsframes'>Frames</Link>
+                    <Link to='/kids/kidspiggybanks'>Piggy Banks</Link>
+                    <Link to='/kids/kidsorganizers'>Organizers</Link>
                   </div>
                 )}
               </div>

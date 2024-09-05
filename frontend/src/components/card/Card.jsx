@@ -20,7 +20,9 @@ export default function Card(props) {
       id: props.foodItem._id,
       name: props.foodItem.name,
       price: props.foodItem.price,
-      img: props.foodItem.img
+      img: props.foodItem.img,
+      display: props.foodItem.display,
+      description: props.foodItem.description
     };
     const encodedProductName = encodeURIComponent(props.foodItem.name);
     navigate(`/viewmore/${encodedProductName}`);

@@ -6,6 +6,7 @@ import MyOrder from './screens/MyOrder.jsx';
 import Items from './screens/items.jsx';
 import ViewMore from './screens/ViewMore.jsx';
 import { useSearchParams } from 'react-router-dom';
+import Checkout from './screens/Checkout.jsx';
 import Kids from './collections/Kids.jsx';
 import Kitchen from './collections/Kitchen.jsx';
 import Walldecor from './collections/Walldecor.jsx';
@@ -38,6 +39,7 @@ function App() {
         <Route path="/jwellery" element={<Jwellery/>}/>
         <Route path="/walldecor" element={<Walldecor/>}/>
         <Route path="/chat" element={<AppChat/>}/>
+        <Route path="/pay" element={<Checkout/>}/>
         <Route path="/canvaspainting" element={<CanvasPainting/>}/>
       </Routes>
     </div>

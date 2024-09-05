@@ -21,7 +21,6 @@
   transform: translateY(0px);
   transition: all 0.7s;
   opacity: 0;
-
 }
 .addtocart:hover{
   background-color: #ac721a;
@@ -37,7 +36,6 @@
   opacity: 0;
   transition: all 0.5s;
   font-family: 'Playfair Display', serif;
-  background-image: url("img3.jpg");
   background-size: cover;
   color: #FEF5DF;
 }

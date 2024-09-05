@@ -2,16 +2,13 @@
   .wrapper {
     height: 80vh;
     width: 80vw;
-    margin: 50px auto;
+    margin: 0px auto;
     border-radius: 7px 7px 7px 7px;
-    /* VIA CSS MATIC https://goo.gl/cIbnS */
-    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
     display: flex;
   }
   
   .product-img {
+    display: flex;
     float: left;
     height: 80vh;
     width: 40vw;
@@ -30,15 +27,11 @@
   }
   
   .product-text {
-    height:50%;
     width: 100%;
     margin:0;
   }
   
   .product-text h1 {
-    margin:30px;
-    margin-bottom: 0px;
-    padding-top: 52px;
     font-size: 34px;
     color: #474747;
   }
@@ -49,8 +42,6 @@
   }
   
   .product-text h2 {
-    
-    margin: 20px;
     margin-top: 0;
     font-size: 13px;
     font-family: 'Raleway', sans-serif;
@@ -61,7 +52,6 @@
   }
   
   .product-text p {
-    height: 50%;
     margin: 0;
     font-family: 'Playfair Display', serif;
     color: #8d8d8d;
@@ -72,11 +62,13 @@
   }
   
   .product-price-btn {
-    height: 50%;
     width: 100%;
-    margin-top: 30px;
-    
     text-align: center;
+  }
+
+  .product-btns
+  {
+    display:flex;
   }
   
   .product-price-btn p {
@@ -112,7 +104,7 @@
     outline: none;
   }
   .view-img{
-    height: 80vh;
+    height: 70vh;
     width: 100%;
   }
   .product-price-btn button:hover {
@@ -161,3 +153,32 @@
       width: 90%;
     }
   }
+
+
+
+  .wrapper .thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right:10px;
+  }
+  
+  .wrapper .thumbnail-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+  }
+  
+  .wrapper .thumbnail-img:hover,
+  .wrapper .thumbnail-img:active {
+    border: 2px solid #000; /* or any color you prefer */
+  }
+  
+
+
+
+
+  
