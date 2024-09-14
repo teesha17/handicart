@@ -7,6 +7,7 @@ import Items from './screens/items.jsx';
 import ViewMore from './screens/ViewMore.jsx';
 import { useSearchParams } from 'react-router-dom';
 import Checkout from './screens/Checkout.jsx';
+import Tracking from './screens/Tracking.jsx';
 import Kids from './collections/Kids.jsx';
 import Kitchen from './collections/Kitchen.jsx';
 import Walldecor from './collections/Walldecor.jsx';
@@ -33,6 +34,7 @@ function App() {
         <Route path='/createuser' element={<SignUp/>}/>
         <Route path="/myorder" element={<MyOrder />} />
         <Route path="/viewmore/:productName" element={<ViewMore/>}/>
+        <Route path="/tracking/:productName" element={<Tracking/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/kitchen" element={<Kitchen/>}/>
         <Route path="/kids" element={<Kids/>}/>

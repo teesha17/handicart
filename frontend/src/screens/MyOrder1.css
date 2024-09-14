@@ -1,0 +1,54 @@
+/* Styling for the container */
+.container1 {
+    padding: 2rem;
+  }
+  
+  /* Styling for the row */
+  .row1 {
+    margin-top: 2rem;
+  }
+  
+  /* Styling for each order card */
+  .card1 {
+    width: 16rem;
+    max-height: 360px;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Styling for the card image */
+  .card-img-top1 {
+    height: 120px;
+    width:100%;
+  }
+  
+  /* Styling for the card body */
+  .card-body1 {
+    padding: 1rem;
+  }
+  
+  /* Styling for card title */
+  .card-title1 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Styling for the price and quantity container */
+  .price-quantity1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 38px;
+  }
+  
+  /* Styling for the no orders message */
+  .no-orders1 {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

@@ -108,17 +108,18 @@
 
 
 
-
-
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatchCart } from '../../components/contextReducer/ContextReducer.jsx';
 import './Cart.css';
 import Navbar from '../../components/navbar/Navbar.jsx';
 import Footer from '../../components/footer/Footer.jsx';
 import { MdOutlineDelete } from "react-icons/md";
+import ConfirmationModal from './ConfirmationModal'; // Import the modal
 
 export default function Cart() {
   const [cartData, setCartData] = useState(() => JSON.parse(localStorage.getItem('cart')) || []);
+  const [showModal, setShowModal] = useState(false);
+  const [orderSummary, setOrderSummary] = useState('');
   const dispatch = useDispatchCart();
 
   useEffect(() => {
@@ -138,7 +139,17 @@ export default function Cart() {
     setCartData(updatedData);
   };
 
-  const handleCheckOut = async () => {
+  const handleCheckOut = () => {
+    let summary = "Order Details:\n\n";
+    cartData.forEach((item, index) => {
+      summary += `${index + 1}. ${item.name} - Qty: ${item.qty}, Price: ${item.price}, Customization: ${item.customization}\n`;
+    });
+    summary += `\nTotal Price: ${totalPrice}/-`;
+    setOrderSummary(summary);
+    setShowModal(true); // Show the confirmation modal
+  };
+
+  const handleConfirmOrder = async () => {
     let userEmail = localStorage.getItem("userEmail");
     let response = await fetch("https://handicart.onrender.com/api/orderData", {
       method: 'POST',
@@ -153,15 +164,15 @@ export default function Cart() {
     });
 
     if (response.status === 200) {
-      let message = "Order Details:\n\n";
-      cartData.forEach((item, index) => {
-        message += `${index + 1}. ${item.name} - Qty: ${item.qty}, Price: ${item.price}, Customization: ${item.customization}\n`;
-      });
-      message += `\nTotal Price: ${totalPrice}/-`;
-      let whatsappURL = `https://web.whatsapp.com/send?phone=919911223452&text=${encodeURIComponent(message)}`;
+      let whatsappURL = `https://web.whatsapp.com/send?phone=919911223452&text=${encodeURIComponent(orderSummary)}`;
       window.open(whatsappURL, "_blank");
+      localStorage.removeItem("cart");
       window.location.href = "/myorder";
     }
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
   let totalPrice = cartData.reduce((total, item) => {
@@ -208,6 +219,12 @@ export default function Cart() {
         </div>
       </div>
       <Footer />
+      <ConfirmationModal 
+        show={showModal} 
+        onClose={handleCloseModal} 
+        onConfirm={handleConfirmOrder} 
+        summary={orderSummary} 
+      />
     </div>
   );
 }
