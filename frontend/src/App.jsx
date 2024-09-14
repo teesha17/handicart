@@ -21,6 +21,7 @@ import {BrowserRouter as Router,
 import SignUp from './screens/SignUp.jsx';
 import { CartProvider } from './components/contextReducer/ContextReducer.jsx';
 import Cart from './screens/cart/Cart.jsx';
+import AdminPage from './screens/AdminPage.jsx';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/admin' element={<AdminPage/>}/>
         <Route path='/items' element={<Items/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/createuser' element={<SignUp/>}/>
