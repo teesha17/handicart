@@ -50,17 +50,26 @@ router.get('/adminOrders', async (req, res) => {
 });
 
 router.put('/updateOrderStatus', async (req, res) => {
-    const { email, orderIndex, status } = req.body;
+    const { email, orderIndex, itemIndex, status } = req.body;
     try {
+        // Find the order by email
         const order = await Order.findOne({ email: email });
+
         if (order) {
-            order.order_data[orderIndex].status = status;  // Update status for the specific order
-            await order.save();
-            res.status(200).send('Order status updated');
+            // Check if the orderData and specified indices exist
+            if (order.order_data[orderIndex] && order.order_data[orderIndex][itemIndex + 1]) {
+                // Update the status for the specific item (adjust itemIndex by +1)
+                order.order_data[orderIndex][itemIndex + 1].status = status;
+                await order.save();
+                res.status(200).send('Order status updated');
+            } else {
+                res.status(404).send('Order item not found');
+            }
         } else {
             res.status(404).send('Order not found');
         }
     } catch (error) {
+        console.error('Failed to update order status:', error);
         res.status(500).send('Failed to update order status');
     }
 });
