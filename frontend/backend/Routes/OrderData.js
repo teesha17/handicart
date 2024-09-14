@@ -40,20 +40,41 @@ router.post('/orderData', async (req, res) => {
     }
 })
 
+router.get('/adminOrders', async (req, res) => {
+    try {
+        const orders = await Order.find(); 
+        res.status(200).json({ orders });
+    } catch (error) {
+        res.status(500).send({ error: 'Failed to fetch orders' });
+    }
+});
+
+router.put('/updateOrderStatus', async (req, res) => {
+    const { email, orderIndex, status } = req.body;
+    try {
+        const order = await Order.findOne({ email: email });
+        if (order) {
+            order.order_data[orderIndex].status = status;  // Update status for the specific order
+            await order.save();
+            res.status(200).send('Order status updated');
+        } else {
+            res.status(404).send('Order not found');
+        }
+    } catch (error) {
+        res.status(500).send('Failed to update order status');
+    }
+});
 
 
 router.post('/myOrderData', async (req, res) => {
     try {
         console.log(req.body.email)
         let eId = await Order.findOne({ 'email': req.body.email })
-        //console.log(eId)
         res.json({orderData:eId})
     } catch (error) {
         res.status(500).send({ error: 'An error occurred' });
 
     }
-    
-
 })
 
 module.exports=router;
