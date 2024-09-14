@@ -7,7 +7,6 @@ import Items from './screens/items.jsx';
 import ViewMore from './screens/ViewMore.jsx';
 import { useSearchParams } from 'react-router-dom';
 import Checkout from './screens/Checkout.jsx';
-import Tracking from './screens/Tracking.jsx';
 import Kids from './collections/Kids.jsx';
 import Kitchen from './collections/Kitchen.jsx';
 import Walldecor from './collections/Walldecor.jsx';
@@ -21,7 +20,6 @@ import {BrowserRouter as Router,
 import SignUp from './screens/SignUp.jsx';
 import { CartProvider } from './components/contextReducer/ContextReducer.jsx';
 import Cart from './screens/cart/Cart.jsx';
-import AdminPage from './screens/AdminPage.jsx';
 
 function App() {
   return (
@@ -30,13 +28,11 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/admin' element={<AdminPage/>}/>
         <Route path='/items' element={<Items/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/createuser' element={<SignUp/>}/>
         <Route path="/myorder" element={<MyOrder />} />
         <Route path="/viewmore/:productName" element={<ViewMore/>}/>
-        <Route path="/tracking/:productName" element={<Tracking/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/kitchen" element={<Kitchen/>}/>
         <Route path="/kids" element={<Kids/>}/>

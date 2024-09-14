@@ -159,7 +159,7 @@ export default function Cart() {
       body: JSON.stringify({
         order_data: cartData,
         email: userEmail,
-        order_date: new Date().toDateString()
+        order_date: new Date().toDateString(),
       })
     });
 
@@ -170,6 +170,36 @@ export default function Cart() {
       window.location.href = "/myorder";
     }
   };
+
+
+
+
+//   const handleConfirmOrder = async () => {
+//     let userEmail = localStorage.getItem("userEmail");
+//     let updatedCartData = cartData.map(item => ({
+//       ...item,
+//       status: item.status || "Order Confirmed" // Only set default if status is not present
+//   }));
+  
+//     let response = await fetch("https://handicart.onrender.com/api/orderData", {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({
+//             order_data: updatedCartData,  // Send updated cart data with status field
+//             email: userEmail,
+//             order_date: new Date().toDateString(),
+//         })
+//     });
+//     if (response.status === 200) {
+//         let whatsappURL = `https://web.whatsapp.com/send?phone=919911223452&text=${encodeURIComponent(orderSummary)}`;
+//         window.open(whatsappURL, "_blank");
+//         localStorage.removeItem("cart");
+//         window.location.href = "/myorder";
+//     }
+// };
+
 
   const handleCloseModal = () => {
     setShowModal(false);
