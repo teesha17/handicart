@@ -107,16 +107,20 @@
 
 
 import React,{useState,useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css'
 import Navbar from '../components/navbar/Navbar.jsx';
 import Footer from '../components/footer/Footer.jsx';
 import Card from '../components/card/Card.jsx';
+import Carousel from '../components/carousel/Carousel.jsx';
 
 
 export default function Home() {
 	const [search, setSearch] = useState('');
 	const [foodCat, setFoodCat] = useState([]);
 	const [foodItem, setFoodItem] = useState([]);
+
+	const slides = ["/img1.jpg","/disp2.jpg","/disp3.jpg","/img2.jpg"];
   
 	const loadData = async () => {
 	  try {
@@ -146,96 +150,24 @@ export default function Home() {
   return (
     <div style={{width:"100vw"}}>
 <Navbar/>  
- {/* <section style={{margin:"2%"}}>
-	<div class="row">
-		{foodCat.map(data=>(
-			<div class="col-md-2 col-sm-4 col-6" >
-			<div class="card">
-				<div class="cover item-a">
-					<h1>{data.CategoryName}</h1>
-				</div>
-			</div>
-		</div>
-		))}
-	</div>
-</section> */}
-<hr/>
- <section className='trending'>
-	<br/><br/>
-	<h1 className='headers'>TRENDING</h1><br/>
-	<div>
-			<div className='row'>
-            {foodItem
-              .filter(item => item.CategoryName === "trending")
-              .map(filterItems => (
-                
-               
-					<div className=' col-lg-3 col-md-4 col-sm-4 col-xs-4'>
-						<Card foodItem={filterItems}/>
-						</div>
-               
-				
-              ))}
-			   </div>
-			 
-	
-	</div>
+<Carousel  />
+<br/><br/>
 
-</section><hr/><br/>
-<section className='trending'>
-	<h1 className='headers'>NEW ARRIVALS</h1><br/>
-	<div>
-			<div className='row'>
-            {foodItem
-              .filter(item => item.CategoryName === "trending")
-              .map(filterItems => (
-                
-               
-					<div className=' col-lg-3 col-md-4 col-sm-4 col-xs-4'>
-						<Card foodItem={filterItems}/>
-						</div>
-               
-				
-              ))}
-			   </div> 
-	</div>
-
-</section>
-<section className='trending'>
-	<h1 className='headers'>NEW ARRIVALS</h1><br/>
-	<div>
-			<div className='row'>
-            {foodItem
-              .filter(item => item.CategoryName === "trending")
-              .map(filterItems => (
-                
-               
-					<div className=' col-lg-3 col-md-4 col-sm-4 col-xs-4'>
-						<Card foodItem={filterItems}/>
-						</div>
-               
-				
-              ))}
-			   </div>
-			 
-	
-	</div>
-
-</section>
-
-{/* <section >
-	<div class="grid-cont" style={{height:"100vh"}}>
-		<div className='class1'>
-			<h3>Long time at home renew it?</h3><br/>
-			<h1>Jute long basket with white border</h1>
-		</div>
-		<div className='class4'>
-		<div className='class2'></div>
-		<div className='class3'></div>
-		</div>
-	</div>
- </section> */}
-
+	<h1 className='headers'>Explore Top Categories</h1>
+            <section>
+                <div className="row">
+                    {foodCat.map(data => (
+                        <div className="col-md-2 col-sm-4 col-6" key={data.id}>
+                            <div className="card-home text-center">
+                                <div className="cover">
+                                    <Link to={data.route}><img src={data.imgUrl} alt={data.categoryName} className="img-fluid" /></Link>
+                                </div>
+                                <h4>{data.categoryName}</h4>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section> 
 
  <Footer/>
 

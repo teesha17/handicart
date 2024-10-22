@@ -11,3 +11,16 @@
 .cart-img{
     height:100px;
 }
+.cart-btn{
+    border:none;
+    background-color: #00000000;
+}
+.cart-btns{
+    text-align: center;
+    width: 70px;
+    border-radius: 10px;
+    border:1px solid rgb(180, 179, 179);
+}
+.thead-text{
+    color:#a09d9d;
+}

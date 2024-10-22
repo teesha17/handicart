@@ -1,127 +1,19 @@
-// import React, { useEffect } from 'react';
-// import { useCart, useDispatchCart } from '../../components/contextReducer/ContextReducer.jsx';
-// import './Cart.css';
-// import Navbar from '../../components/navbar/Navbar.jsx';
-// import Footer from '../../components/footer/Footer.jsx';
-// import { Link,useNavigate } from 'react-router-dom';
-// import { MdOutlineDelete } from "react-icons/md";
-// import Checkout from '../Checkout.jsx';
-
-// export default function Cart() {
-//   let data = JSON.parse(localStorage.getItem('cart')) || [];
-//   let dispatch = useDispatchCart();
-//   const navigate = useNavigate();
-
-//   if (data.length === 0) {
-//     return (
-//       <div>
-//         <Navbar/>
-//         <div style={{width:"100vw",textAlign:"center"}}>The Cart is Empty!</div>
-//       </div>
-//     );
-//   }
-
-//   const handleDelete = (index) => {
-//     let updatedData = data.filter((_, i) => i !== index);
-//     localStorage.setItem('cart', JSON.stringify(updatedData));
-//     dispatch({ type: 'REMOVE_ITEM', index });
-//     window.location.reload(); // Refresh to reflect changes
-//   };
-
-//   const handleCheckOut = async () => {
-//     let userEmail = localStorage.getItem("userEmail");
-//     let response = await fetch("https://handicart.onrender.com/api/orderData", {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json'
-//       },
-//       body: JSON.stringify({
-//         order_data: data,
-//         email: userEmail,
-//         order_date: new Date().toDateString()
-//       })
-//     });
-
-//     if (response.status === 200) {
-//       //localStorage.removeItem('cart');
-
-//       // Construct the message with cart details
-//       let message = "Order Details:\n\n";
-//       data.forEach((item, index) => {
-//         message += `${index + 1}. ${item.name} - Qty: ${item.qty}, Price: ${item.price}\n`;
-//       });
-//       message += `\nTotal Price: ${totalPrice}/-`;
-
-//       // Create WhatsApp URL
-//       //let whatsappURL = `https://wa.me/919911223452?text=${encodeURIComponent(message)}`;
-
-//       // Open WhatsApp URL
-//       //window.open(whatsappURL, "_blank");
-//       navigate("/pay");
-//       // Redirect to the payment URL
-//       window.location.href = "/pay";
-//     }
-//   };
-
-//   let totalPrice = data.reduce((total, food) => total + parseInt(food.price), 0);
-
-//   return (
-//     <div>
-//       <Navbar/>
-//       <div className='container m-auto mt-5 table-responsive table-responsive-sm table-responsive-md' style={{height:"100vh"}}>
-//         <table className='table'>
-//           <thead className='text-info fs-4'>
-//             <tr>
-//               <th scope='col'>#</th>
-//               <th scope='col'>Name</th>
-//               <th scope='col'>Quantity</th>
-//               <th scope='col'>Amount</th>
-//               <th scope='col'>trgrtb</th>
-//             </tr>
-//           </thead>
-//           <tbody>
-//             {data.map((food, index) => (
-//               <tr key={index}>
-//                 <th scope='row'>{index + 1}</th>
-//                 <td><img src={food.img} className='cart-img'></img></td>
-//                 <td>{food.name}</td>
-//                 <td>{food.qty}</td>
-//                 <td>{food.price}</td>
-//                 <td><button type="button" className="remove" onClick={() => handleDelete(index)}><MdOutlineDelete/></button></td>
-//               </tr>
-//             ))}
-//           </tbody>
-//         </table>
-//         <div><h1 className='fs-2' style={{ color: 'black' }}>Total Price: {totalPrice}/-</h1></div>
-//         <div onClick={handleCheckOut}>
-//           <button className='btn bg-danger mt-5' onClick={handleCheckOut}>Checkout</button>
-//         </div>
-//       </div>
-//       <Footer/>
-//     </div>
-//   );
-// }
-
-
-
-
-
-
-
 import React, { useState, useEffect } from 'react';
 import { useDispatchCart } from '../../components/contextReducer/ContextReducer.jsx';
 import './Cart.css';
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
 import Navbar from '../../components/navbar/Navbar.jsx';
 import Footer from '../../components/footer/Footer.jsx';
 import { MdOutlineDelete } from "react-icons/md";
-import ConfirmationModal from './ConfirmationModal'; // Import the modal
+import ConfirmationModal from './ConfirmationModal';
 
 export default function Cart() {
   const [cartData, setCartData] = useState(() => JSON.parse(localStorage.getItem('cart')) || []);
   const [showModal, setShowModal] = useState(false);
   const [orderSummary, setOrderSummary] = useState('');
   const dispatch = useDispatchCart();
-
+  const navigate = useNavigate(); // Use navigate for redirection
+  
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cartData));
   }, [cartData]);
@@ -146,7 +38,7 @@ export default function Cart() {
     });
     summary += `\nTotal Price: ${totalPrice}/-`;
     setOrderSummary(summary);
-    setShowModal(true); // Show the confirmation modal
+    setShowModal(true); 
   };
 
   const handleConfirmOrder = async () => {
@@ -171,38 +63,22 @@ export default function Cart() {
     }
   };
 
-
-
-
-//   const handleConfirmOrder = async () => {
-//     let userEmail = localStorage.getItem("userEmail");
-//     let updatedCartData = cartData.map(item => ({
-//       ...item,
-//       status: item.status || "Order Confirmed" // Only set default if status is not present
-//   }));
-  
-//     let response = await fetch("https://handicart.onrender.com/api/orderData", {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify({
-//             order_data: updatedCartData,  // Send updated cart data with status field
-//             email: userEmail,
-//             order_date: new Date().toDateString(),
-//         })
-//     });
-//     if (response.status === 200) {
-//         let whatsappURL = `https://web.whatsapp.com/send?phone=919911223452&text=${encodeURIComponent(orderSummary)}`;
-//         window.open(whatsappURL, "_blank");
-//         localStorage.removeItem("cart");
-//         window.location.href = "/myorder";
-//     }
-// };
-
-
   const handleCloseModal = () => {
     setShowModal(false);
+  };
+
+  const handleViewMore = (product) => {
+    const cardData = {
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      img: product.img,
+      display: product.display,
+      description: product.description
+    };
+    const encodedProductName = encodeURIComponent(product.name);
+    navigate(`/viewmore/${encodedProductName}`);
+    localStorage.setItem("cardData", JSON.stringify(cardData));
   };
 
   let totalPrice = cartData.reduce((total, item) => {
@@ -216,26 +92,36 @@ export default function Cart() {
       <Navbar />
       <div className='container m-auto mt-5 table-responsive table-responsive-sm table-responsive-md' style={{ height: "100vh" }}>
         <table className='table'>
-          <thead className='text-info fs-4'>
-            <tr>
-              <th scope='col'>#</th>
-              <th scope='col'>Image</th>
+          <thead>
+            <tr >
+              <th className='thead-text' scope='col'>#</th>
+              <th className='thead-text' scope='col'>Product</th>
               <th scope='col'>Name</th>
               <th scope='col'>Quantity</th>
               <th scope='col'>Amount</th>
-              <th scope='col'>Remove</th>
             </tr>
           </thead>
           <tbody>
             {cartData.map((food, index) => (
               <tr key={index}>
                 <th scope='row'>{index + 1}</th>
-                <td><img src={food.img} className='cart-img' alt={food.name} /></td>
-                <td>{food.name}</td>
+                {/* Use onClick event on the image to call handleViewMore */}
                 <td>
-                  <button onClick={() => handleQuantityChange(index, -1)}>-</button>
+                  <img
+                    src={food.img}
+                    className='cart-img'
+                    alt={food.name}
+                    onClick={() => handleViewMore(food)} // Trigger the redirection on image click
+                    style={{ cursor: 'pointer' }} // Add a pointer to show it's clickable
+                  />
+                </td>
+                <td>{food.name}</td>
+                <td >
+                  <div className='cart-btns'>
+                  <button className='cart-btn' onClick={() => handleQuantityChange(index, -1)}> - </button>
                   {food.qty}
-                  <button onClick={() => handleQuantityChange(index, 1)}>+</button>
+                  <button className='cart-btn' onClick={() => handleQuantityChange(index, 1)}>+</button>
+                  </div>
                 </td>
                 <td>{food.price * food.qty}</td>
                 <td><button type="button" className="remove" onClick={() => handleDelete(index)}><MdOutlineDelete /></button></td>

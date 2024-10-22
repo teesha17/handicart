@@ -9,7 +9,7 @@ export default function Items() {
   const [search, setSearch] = useState('');
   const [foodCat, setFoodCat] = useState([]);
   const [foodItem, setFoodItem] = useState([]);
-  const [priceRange, setPriceRange] = useState([0, 10000]);
+  const [priceRange, setPriceRange] = useState([0, 2000]);
 
   const handleChange = event => {
     setSearch(event.target.value);
@@ -47,6 +47,23 @@ export default function Items() {
     <div>
       <Navbar />
       <div className='d-flex'>
+        
+        <div className='container justify-content-center'>
+          
+            <div className='row mb-3'>
+              <div className='fs-3 m-3' style={{ color: "black" }}>Name Plates</div>
+              <hr />
+              {foodItem
+                .filter(item => item.CategoryName === "Name Plates")
+                .filter(item => (item.name ? item.name.toLowerCase().includes(search.toLowerCase()) : false))
+                .filter(item => item.price >= priceRange[0] && item.price <= priceRange[1])
+                .map(filterItems => (
+                  <div key={filterItems._id} className='col-12 col-md-4 col-lg-4'>
+                    <Card foodItem={filterItems} />
+                  </div>
+                ))}
+            </div>
+        </div>
         <div>
           <div className="px-4 py-5 my-0 text-center ">
             <form className="d-flex m-1" style={{ width: '100%', justifyContent: "flex-end" }}>
@@ -57,7 +74,7 @@ export default function Items() {
               <Slider
                 range
                 min={0}
-                max={10000}
+                max={2000}
                 step={10}
                 defaultValue={[1500, 10000]}
                 value={priceRange}
@@ -70,23 +87,6 @@ export default function Items() {
               </div>
             </div>
           </div>
-        </div>
-        <div className='container justify-content-center'>
-          {foodCat.map(data => (
-            <div className='row mb-3' key={data._id}>
-              <div className='fs-3 m-3' style={{ color: "black" }}>{data.CategoryName}</div>
-              <hr />
-              {foodItem
-                .filter(item => item.CategoryName === data.CategoryName)
-                .filter(item => (item.name ? item.name.toLowerCase().includes(search.toLowerCase()) : false))
-                .filter(item => item.price >= priceRange[0] && item.price <= priceRange[1])
-                .map(filterItems => (
-                  <div key={filterItems._id} className='col-12 col-md-3 col-lg-3'>
-                    <Card foodItem={filterItems} />
-                  </div>
-                ))}
-            </div>
-          ))}
         </div>
       </div>
       <Footer />

@@ -149,32 +149,41 @@ export default function ViewMore() {
           
           {/* Quantity Selector */}
           <div className="quantity-selector">
-            <label htmlFor="quantity">Quantity: </label>
-            <input 
-              type="number" 
-              id="quantity" 
-              min="1" 
-              value={quantity} 
-              onChange={(e) => setQuantity(parseInt(e.target.value))}
-            />
-          </div>
+  <p style={{display:"inline",marginRight:"30px"}}>Quantity:</p>
+  <div className="quantity-controls">
+    <button className="quantity-btn" onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}>-</button>
+    <input 
+      type="number" 
+      id="quantity" 
+      min="1" 
+      value={quantity} 
+      onChange={(e) => setQuantity(parseInt(e.target.value))}
+      style={{width:"50px",border:"none",textAlign:"center"}}
+    />
+    <button className="quantity-btn" onClick={() => setQuantity(quantity + 1)}>+</button>
+  </div>
+</div>
+<div>
+  <p style={{display:"inline",marginRight:"30px"}}>Subtotal: <span style={{fontWeight:"700"}}>Rs. {quantity*data.price}</span></p>
+</div>
           
           {/* Customization Input */}
           <div className="customization-input">
-            <label htmlFor="customization">Customization: </label>
+            <p style={{display:"inline",marginRight:"30px"}}>Customization: </p>
             <textarea 
               id="customization" 
               value={customization} 
               onChange={(e) => setCustomization(e.target.value)}
-              placeholder="Enter any specific requirements here"
+              placeholder="Enter here"
+              style={{height:'30px'}}
             />
           </div>
 
           <div className="product-btns">
-            <button className="btn btn-success rounded">
+            <button className='product-btn btn-1'>
               <Link to="https://wa.me/919911223452" style={{ textDecoration: "none", color: "white" }}>Order On WhatsApp</Link>
             </button>
-            <button className="btn btn-success rounded mx-3" onClick={handleAddCart}>
+            <button className='product-btn btn-2' onClick={handleAddCart}>
               Add to cart
             </button>
           </div>

@@ -428,7 +428,7 @@ const Navbar = () => {
                 <Link to='/' className='mobile-link' style={{ textDecoration: "none", color: "black" }}>Home</Link>
               </div>
               <div className='navtext' onClick={closeMobileMenu}>
-                <Link to='/items' className='mobile-link' style={{ textDecoration: "none", color: "black" }}>Products</Link>
+                <Link to='/nameplates' className='mobile-link' style={{ textDecoration: "none", color: "black" }}>Name Plates</Link>
               </div>
               <div className='navtext' onClick={closeMobileMenu}>
                 <Link to='/chat' className='mobile-link' style={{ textDecoration: "none", color: "black" }}>AiChat Room</Link>

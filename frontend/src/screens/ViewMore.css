@@ -7,6 +7,21 @@
     display: flex;
   }
   
+.quantity-btn{
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+
+}
+.quantity-controls{
+  border-radius: 10px;
+  border:1px solid rgb(218, 213, 213);
+  height:30px;
+}
+.quantity-selector{
+  display: flex;
+}
+
+
   .product-img {
     display: flex;
     float: left;
@@ -15,11 +30,11 @@
   }
   
   .product-info {
-    text-align: center;
+    
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-left:50px;
+   
     height: 80vh;
     width: 40vw;
     border-radius: 0 7px 10px 7px;
@@ -36,17 +51,13 @@
     color: #474747;
   }
   
-  .product-text h1,
-  .product-price-btn p {
-    font-family: 'Bentham', serif;
-  }
+  
   
   .product-text h2 {
     margin-top: 0;
     font-size: 13px;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    text-transform: uppercase;
     color: #d2d2d2;
     letter-spacing: 0.2em;
   }
@@ -61,16 +72,20 @@
     overflow: hidden;
   }
   
-  .product-price-btn {
+  .product-btn {
     width: 100%;
-    text-align: center;
+    border-radius: 7px;
+    border:none;
+    margin-bottom: 10px;
+    height:40px;
+  }
+  .btn-1{
+    background-color: #000;
+  }
+  .btn-2{
+    background-color: #f7e8b1;
   }
 
-  .product-btns
-  {
-    display:flex;
-  }
-  
   .product-price-btn p {
    
     
@@ -96,7 +111,7 @@
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
     font-weight: 500;
-    text-transform: uppercase;
+    
     letter-spacing: 0.2em;
     color: #ffffff;
     background-color: #d48926;
