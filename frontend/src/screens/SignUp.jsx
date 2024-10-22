@@ -38,6 +38,7 @@ export default function SignUp()
   }
   if(jSon.success){
     localStorage.setItem("userEmail",credentials.email);
+    localStorage.setItem("name",credentials.name);
     localStorage.setItem("authToken",json.authToken);
     console.log(localStorage.getItem("authToken"))
     navigate("/");

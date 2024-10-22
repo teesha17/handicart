@@ -32,7 +32,8 @@ export default function Cart() {
   };
 
   const handleCheckOut = () => {
-    let summary = "Order Details:\n\n";
+    const email = localStorage.getItem('userEmail')
+    let summary =  ` Hi Shefali!!\nThis is ${email} Order Details:\n\n`;
     cartData.forEach((item, index) => {
       summary += `${index + 1}. ${item.name} - Qty: ${item.qty}, Price: ${item.price}, Customization: ${item.customization}\n`;
     });
