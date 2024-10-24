@@ -1,22 +1,17 @@
-import React,{ useState } from 'react'
+import React from 'react'
 import './App.css'
 import Home from './screens/Home.jsx'
 import Login from './screens/Login.jsx';
 import MyOrder from './screens/MyOrder.jsx';
 import Items from './screens/items.jsx';
 import ViewMore from './screens/ViewMore.jsx';
-import { useSearchParams } from 'react-router-dom';
-import Checkout from './screens/Checkout.jsx';
 import Kids from './collections/Kids.jsx';
 import Kitchen from './collections/Kitchen.jsx';
 import Walldecor from './collections/Walldecor.jsx';
 import Jwellery from './collections/Jwellery.jsx';
 import CanvasPainting from './collections/CanvasPainting.jsx';
 import AppChat from './screens/AiChat/Aichat.jsx';
-import {BrowserRouter as Router,
-  Routes,
-  Route
-} from 'react-router-dom';
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import SignUp from './screens/SignUp.jsx';
 import { CartProvider } from './components/contextReducer/ContextReducer.jsx';
 import Cart from './screens/cart/Cart.jsx';
@@ -39,7 +34,6 @@ function App() {
         <Route path="/jwellery" element={<Jwellery/>}/>
         <Route path="/walldecor" element={<Walldecor/>}/>
         <Route path="/chat" element={<AppChat/>}/>
-        <Route path="/pay" element={<Checkout/>}/>
         <Route path="/canvaspainting" element={<CanvasPainting/>}/>
       </Routes>
     </div>

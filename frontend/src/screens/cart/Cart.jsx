@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatchCart } from '../../components/contextReducer/ContextReducer.jsx';
 import './Cart.css';
-import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
+import { Link, useNavigate } from 'react-router-dom'; 
 import Navbar from '../../components/navbar/Navbar.jsx';
 import Footer from '../../components/footer/Footer.jsx';
 import { MdOutlineDelete } from "react-icons/md";
@@ -12,7 +12,7 @@ export default function Cart() {
   const [showModal, setShowModal] = useState(false);
   const [orderSummary, setOrderSummary] = useState('');
   const dispatch = useDispatchCart();
-  const navigate = useNavigate(); // Use navigate for redirection
+  const navigate = useNavigate(); 
   
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cartData));
@@ -106,14 +106,13 @@ export default function Cart() {
             {cartData.map((food, index) => (
               <tr key={index}>
                 <th scope='row'>{index + 1}</th>
-                {/* Use onClick event on the image to call handleViewMore */}
                 <td>
                   <img
                     src={food.img}
                     className='cart-img'
                     alt={food.name}
-                    onClick={() => handleViewMore(food)} // Trigger the redirection on image click
-                    style={{ cursor: 'pointer' }} // Add a pointer to show it's clickable
+                    onClick={() => handleViewMore(food)} 
+                    style={{ cursor: 'pointer' }} 
                   />
                 </td>
                 <td>{food.name}</td>

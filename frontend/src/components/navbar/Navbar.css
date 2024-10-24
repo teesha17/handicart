@@ -1,7 +1,6 @@
-/* Navbar.css */
-.cross{
+.cross {
     position: absolute;
-    top:50px;
+    top: 50px;
     margin-bottom: 50px;
 }
 
@@ -27,9 +26,9 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    top:25px;
+    top: 25px;
     background-color: white;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     min-width: 100px;
     font-size: 10px;
@@ -121,7 +120,7 @@
 .navtext {
     text-decoration: none;
     transition: background-size 0.2s ease-in-out;
-    
+
 }
 
 .navBar .jscop {
@@ -137,7 +136,7 @@
     display: flex;
     justify-content: center;
     align-items: start;
-    margin-right:10px;
+    margin-right: 10px;
 }
 
 .navBar .navtext {
@@ -151,10 +150,9 @@
 }
 
 .navBar .navtext {
-    font-weight: 600; 
+    font-weight: 600;
     color: saddlebrown;
     text-decoration: none;
-    background-image: linear-gradient(#b9365d, #d9af5a);
     background-size: 0% 0.1em;
     background-position-y: 100%;
     background-position-x: 100%;
@@ -180,7 +178,7 @@
 }
 
 @media only screen and (max-width: 850px) {
-    
+
     .hamburger {
         display: block;
         cursor: pointer;
@@ -202,6 +200,7 @@
         z-index: 999;
         height: 100px;
     }
+
     .navBar .jscop {
         position: absolute;
         top: 0;
@@ -231,10 +230,12 @@
         border-radius: 5%;
         color: rgb(0, 0, 0);
     }
-    .navtext{
-        height:100px;
+
+    .navtext {
+        height: 100px;
     }
-    .mobile-link{
+
+    .mobile-link {
         font-size: 1.5rem;
     }
 
@@ -244,7 +245,7 @@
     }
 
 
-    
+
 }
 
 @media only screen and (max-width: 520px) {
@@ -266,10 +267,12 @@
     .navBar {
         height: 50px;
     }
-    .navtext{
-        height:50px;
+
+    .navtext {
+        height: 50px;
     }
-    .mobile-link{
+
+    .mobile-link {
         font-size: 20px;
     }
 

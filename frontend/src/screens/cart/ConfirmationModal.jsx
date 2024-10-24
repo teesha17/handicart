@@ -1,6 +1,5 @@
-// ConfirmationModal.jsx
 import React from 'react';
-import './ConfirmationModal.css'; // Add styles for the modal
+import './ConfirmationModal.css'; 
 
 export default function ConfirmationModal({ show, onClose, onConfirm, summary }) {
   if (!show) return null;

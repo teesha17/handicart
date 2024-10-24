@@ -9,7 +9,7 @@ const Modal = ({ isOpen, onClose, product }) => {
     <div className="modal-overlay">
       <div className="modal-content">
         <button className="modal-close" onClick={onClose}>&times;</button>
-        <img src={product.img} alt={product.name} className="modal-img"/>
+        <img src={product.img} alt={product.name} className="modal-img" />
         <p>{product.name} is added to your shopping cart.</p>
         <div className="modal-buttons">
           <button className="btn btn-light" onClick={onClose}>Continue Shopping</button>

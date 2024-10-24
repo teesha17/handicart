@@ -33,6 +33,7 @@ export default function Items() {
       response = await response.json();
       setFoodItem(response[0]);
       setFoodCat(response[1]);
+      //setFoodCat(response[1]);
     } catch (error) {
       console.error("Error loading data:", error);
       // Handle the error, show a message to the user, or retry the request
@@ -46,30 +47,13 @@ export default function Items() {
   return (
     <div>
       <Navbar />
-      <div className='d-flex'>
-        
-        <div className='container justify-content-center'>
-          
-            <div className='row mb-3'>
-              <div className='fs-3 m-3' style={{ color: "black" }}>Name Plates</div>
-              <hr />
-              {foodItem
-                .filter(item => item.CategoryName === "Name Plates")
-                .filter(item => (item.name ? item.name.toLowerCase().includes(search.toLowerCase()) : false))
-                .filter(item => item.price >= priceRange[0] && item.price <= priceRange[1])
-                .map(filterItems => (
-                  <div key={filterItems._id} className='col-12 col-md-4 col-lg-4'>
-                    <Card foodItem={filterItems} />
-                  </div>
-                ))}
-            </div>
-        </div>
-        <div>
-          <div className="px-4 py-5 my-0 text-center ">
+      <div className='d-flex flex-column flex-md-row'>
+      <div>
+          <div className="px-4 my-0 text-center ">
             <form className="d-flex m-1" style={{ width: '100%', justifyContent: "flex-end" }}>
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={search} onChange={handleChange} />
             </form>
-            <div className="d-flex m-1 flex-column" style={{ width: '100%', justifyContent: "center" }}>
+            <div className="d-flex flex-column" style={{ width: '100%', justifyContent: "center" }}>
               <h5>Price filter</h5>
               <Slider
                 range
@@ -88,6 +72,23 @@ export default function Items() {
             </div>
           </div>
         </div>
+        <div className='container justify-content-center'>
+
+          <div className='row mb-3'>
+            <div className='fs-3 mt-3' style={{ color: "black" }}>Name Plates</div>
+            <hr />
+            {foodItem
+              .filter(item => item.CategoryName === "Name Plates")
+              .filter(item => (item.name ? item.name.toLowerCase().includes(search.toLowerCase()) : false))
+              .filter(item => item.price >= priceRange[0] && item.price <= priceRange[1])
+              .map(filterItems => (
+                <div key={filterItems._id} className='col-12 col-md-4 col-lg-4'>
+                  <Card foodItem={filterItems} />
+                </div>
+              ))}
+          </div>
+        </div>
+        
       </div>
       <Footer />
     </div>

@@ -1,4 +1,3 @@
-// Carousel.js
 import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
@@ -18,8 +17,8 @@ const Carousel = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,          // Enables auto-changing images
-        autoplaySpeed: 3000,     // 3 seconds delay
+        autoplay: true,          
+        autoplaySpeed: 3000,     
         pauseOnHover: true,
     };
 

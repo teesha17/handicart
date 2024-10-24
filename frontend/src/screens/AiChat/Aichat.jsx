@@ -3,8 +3,6 @@ import './Aichat.css'
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
 import Navbar from "../../components/navbar/Navbar";
-/* styles.css */
-
 
 function AppChat() {
   const [question, setQuestion] = useState("");

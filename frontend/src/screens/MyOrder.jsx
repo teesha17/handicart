@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Footer from '../components/footer/Footer.jsx';
 import Navbar from '../components/navbar/Navbar.jsx';
-import './MyOrder1.css'; 
+import './MyOrder1.css';
 
 export default function MyOrder() {
     const [orderData, setOrderData] = useState({});
